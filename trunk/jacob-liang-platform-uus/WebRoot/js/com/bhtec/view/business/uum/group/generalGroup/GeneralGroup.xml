@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<javaScripts>
+		<javaScript>./js/com/bhtec/view/business/uum/group/generalGroup/GeneralGroupList.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/group/generalGroup/GeneralGroupVOp.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/group/MultiSelect.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/group/generalGroup/GeneralGroupMember.js</javaScript>
+		<javaScript>./ext/ux/grid/RowExpander.js</javaScript>
+	</javaScripts>
+	<fieldNames>
+		<field name="groupName">组名称</field>
+		<field name="status">组状态</field>
+		<field name="memo">组备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+		<field name="organ">机构</field>
+		<field name="role">角色</field>
+		<field name="memberName">成员名称</field>
+		<field name="memberType">成员类型</field>
+		<field name="generalGroupAdd">普通组成员添加</field>
+		<field name="generalGroupInfoAdd">普通组信息添加</field>
+	</fieldNames>
+</module>

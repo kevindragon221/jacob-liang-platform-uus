@@ -1,0 +1,285 @@
+#header{
+   border:0 none;
+   background:#1E4176 url(../img/navigate/hd-bg.png) repeat-x 0 0;
+   padding-top:3px;
+   padding-left:3px;
+}
+#header .title {
+    font:normal 16px tahoma, arial, sans-serif;
+    color:white;
+    margin:5px;
+}
+
+.font12 {font-size: 12px;}
+.systitle {
+		font-family: "隶书";
+		font-size: 36px;
+		color: #FFFFFF;
+}
+.background{
+   border:0 none;
+   background:#1E4176 url(../img/bht.png) repeat-x 0 0;
+  
+}
+/*图片局中*/
+.middle{
+ vertical-align:middle;
+}
+/*--------------------------------导航-----------------------------------*/
+.currPosition {
+	padding-left:20px;
+    background: url(../img/navigate/currPosition.png) no-repeat !important;
+}
+.help {
+    background: url(../img/navigate/help.png) no-repeat !important;
+}
+.change_skin {
+    background: url(../img/navigate/change_skin.png) no-repeat !important;
+}
+
+.user_edit {
+    background: url(../img/navigate/user_edit.png) no-repeat !important;
+}
+
+.logout {
+    background: url(../img/navigate/logout.png) no-repeat !important;
+}
+.platform {
+    background: url(../img/navigate/platform.png) no-repeat !important;
+}
+
+.uus {
+    background: url(../img/navigate/uus.png) no-repeat !important;
+}
+
+.home {
+    background: url(../img/menu/home.png) no-repeat !important;
+}
+.usedfunc {
+    background: url(../img/menu/usedfunc.png) no-repeat !important;
+}
+.portal {
+    background: url(../img/navigate/portal.png) no-repeat !important;
+}
+.usedfuncmaint {
+    background: url(../img/menu/usedfuncmaint.png) no-repeat !important;
+}
+.frameMgr {
+    background: url(../img/menu/frameMgr.png) no-repeat !important;
+}
+.afficheMgr {
+	background: url(../img/menu/afficheMgr.png) no-repeat !important;
+}
+.moduleOp {
+    background: url(../img/menu/moduleOp.png) no-repeat !important;
+}
+.dicMgr {
+    background: url(../img/menu/dicMgr.png) no-repeat !important;
+}
+.typeDicMgr{
+    background: url(../img/menu/typeDicMgr.png) no-repeat !important;
+}
+.pageDicMgr{
+    background: url(../img/menu/pageDicMgr.png) no-repeat !important;
+}
+.systemMgr {
+    background: url(../img/menu/systemMgr.png) no-repeat !important;
+}
+.codMgr {
+    background: url(../img/menu/codMgr.png) no-repeat !important;
+}
+/*调度管理*/
+.schedulerMgr {
+     background: url(../img/menu/scheduler.png) no-repeat !important;
+}
+.priCityMgr {
+    background: url(../img/menu/priCityMgr.png) no-repeat !important;
+}
+/*省市地区title*/
+.priCityMgrTitle {
+	background: url(../img/menu/priCityMgr.png) no-repeat !important;
+}
+.systemParaMgr {
+    background: url(../img/menu/systemParaMgr.png) no-repeat !important;
+}
+.dbBkReMgr{
+    background: url(../img/menu/dbBkReMgr.png) no-repeat !important;
+}
+/*数据库备份管理*/
+.dbBkReMgrTitle{
+	background: url(../img/menu/dbBkReMgr.png) no-repeat !important;
+}
+.logMgr {
+    background: url(../img/menu/logMgr.png) no-repeat !important;
+}
+.sysLogMgr{
+	background: url(../img/menu/sysLogMgr.png) no-repeat !important;
+}
+.sysConMgr{
+	background: url(../img/menu/sysConMgr.png) no-repeat !important;
+}
+.pageFun {
+    background: url(../img/menu/pageFun.png) no-repeat !important;
+}
+.pagePattern {
+    background: url(../img/menu/pagePattern.png) no-repeat !important;
+}
+.moduleMgr {
+    background: url(../img/menu/moduleMgr.png) no-repeat !important;
+}
+.oprateMgr {
+    background: url(../img/menu/oprateMgr.png) no-repeat !important;
+}
+.rightKeyCloseTab {
+    background: url(../img/menu/rightKeyCloseTab.png) no-repeat !important;
+}
+.skinSelected {
+    background: url(../img/navigate/skinSelected.png) no-repeat !important;
+}
+.qq {
+    background: url(../img/navigate/qq.png) no-repeat !important;
+}
+/*-------------------------操作按钮---------------------------------------*/
+.table_add {
+    background: url(../img/button/table_add.png) no-repeat !important;
+}
+.table_edit {
+    background: url(../img/button/table_edit.png) no-repeat !important;
+}
+.table_delete {
+    background: url(../img/button/table_delete.png) no-repeat !important;
+}
+.table {
+    background: url(../img/button/table.png) no-repeat !important;
+}
+.table_save {
+    background: url(../img/button/table_save.png) no-repeat !important;
+}
+.table_close {
+    background: url(../img/button/table_close.png) no-repeat !important;
+}
+.table_multiple {
+    background: url(../img/button/table_multiple.png) no-repeat !important;
+}
+.table_find {
+    background: url(../img/button/table_find.png) no-repeat !important;
+}
+.login {
+    background: url(../img/button/login.png) no-repeat !important;
+}
+.close {
+    background: url(../img/button/close.png) no-repeat !important;
+}
+.left_arrow {
+	background: url(../img/button/left_arrow.gif) no-repeat !important;
+}
+
+.right_arrow {
+	background: url(../img/button/right_arrow.gif) no-repeat !important;
+}
+.enable {
+	background: url(../img/button/enable.png) no-repeat !important;
+}
+.disable {
+	background: url(../img/button/disable.png) no-repeat !important;
+}
+.assign {
+	background: url(../img/button/assign.png) no-repeat !important;
+}
+.word {
+	background: url(../img/button/word.png) no-repeat !important;
+}
+.excel {
+	background: url(../img/button/excel.png) no-repeat !important;
+}
+.powerpoint {
+	background: url(../img/button/powerpoint.png) no-repeat !important;
+}
+.pdf {
+	background: url(../img/button/pdf.png) no-repeat !important;
+}
+.withoutformat {
+	background: url(../img/button/withoutformat.png) no-repeat !important;
+}
+.module_label {
+	background: url(../img/button/module_label.png) no-repeat !important;
+}
+.save_time {
+	background: url(../img/button/save_time.png) no-repeat !important;
+}
+/*启动*/
+.scheduler_start {
+	background: url(../img/button/scheduler_start.png) no-repeat !important;
+}
+/*停止*/
+.scheduler_stop {
+     background: url(../img/button/scheduler_stop.png) no-repeat !important;
+}
+/*调度启动*/
+.job_start {
+	background: url(../img/button/job_start.png) no-repeat !important;
+}
+/*调度停止*/
+.job_stop {
+	background: url(../img/button/job_stop.png) no-repeat !important;
+}
+/*---------------------------------统一用户-----------------------------------*/
+/*机构信息管理*/
+.organmgr {
+	background: url(../img/menu/organmgr.png) no-repeat !important;
+}
+/*机构信息管理title*/
+.organmgrtitle {
+	background: url(../img/menu/organmgr.png) no-repeat !important;
+}
+/*角色信息管理*/
+.rolemgr{
+	background: url(../img/menu/rolemgr.png) no-repeat !important;
+}
+/*角色信息管理title*/
+.rolemgrtitle{
+	background: url(../img/menu/rolemgr.png) no-repeat !important;
+}
+.roleassignmgr{
+	background: url(../img/menu/roleassignmgr.png) no-repeat !important;
+}
+/*用户信息管理*/
+.usermgr{
+    background: url(../img/menu/usermgr.png) no-repeat !important;
+}
+/*用户信息管理title*/
+.usermgrtitle{
+    background: url(../img/menu/usermgr.png) no-repeat !important;
+}
+.username{
+	background-color:#FFFFFF;
+	padding-left:20px;
+	font-weight:bold;
+	color:#000033;
+	background: url(../img/menu/usermgr.png) no-repeat !important;
+}
+.groupmgr{
+	background: url(../img/menu/groupmgr.png) no-repeat !important;
+}
+.usergroupmgr{
+	background: url(../img/menu/usergroupmgr.png) no-repeat !important;
+}
+.gernalgroupmgr{
+	background: url(../img/menu/gernalgroupmgr.png) no-repeat !important;
+}
+.rolegroupmgr{
+	background: url(../img/menu/rolegroupmgr.png) no-repeat !important;
+}
+.password{
+	background-color:#FFFFFF;
+	padding-left:20px;
+	font-weight:bold;
+	color:#000033;
+	background: url(../img/menu/privialmgr.png) no-repeat !important;
+}
+.resetpwd{
+	background: url(../img/menu/resetpwd.png) no-repeat !important;
+}
+.rowprimgr{
+	background: url(../img/menu/rowprimgr.png) no-repeat !important;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<javaScripts>
+		<javaScript>./js/com/bhtec/view/business/commonused/userinfomodify/UserInfoModify.js</javaScript>
+	</javaScripts>
+	<fieldNames>
+		<field name="userCode">用户号</field>
+		<field name="userName">用户名</field>
+		<field name="userOldPassword">原密码</field>
+		<field name="userNewPassword">新密码</field>
+		<field name="userConfirmPassword">确认密码</field>
+	</fieldNames>
+</module>

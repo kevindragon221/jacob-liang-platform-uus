@@ -1,0 +1,382 @@
+#header{
+   border:0 none;
+   background:#1E4176 url(../img/navigate/hd-bg.png) repeat-x 0 0;
+   padding-top:3px;
+   padding-left:3px;
+}
+#header .title {
+    font:normal 16px tahoma, arial, sans-serif;
+    color:white;
+    margin:5px;
+}
+
+.font12 {font-size: 12px;}
+.systitle {
+		font-family: "隶书";
+		font-size: 36px;
+		color: #FFFFFF;
+}
+.background{
+   border:0 none;
+   background:#1E4176 url(../img/bht.png) repeat-x 0 0;
+  
+}
+.currPosition {
+	padding-left:20px;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/currPosition.png")
+    no-repeat !important;
+}
+.help {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/help.png")
+    no-repeat !important;
+}
+.change_skin {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/change_skin.png")
+    no-repeat !important;
+}
+
+.user_edit {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/user_edit.png")
+    no-repeat !important;
+}
+
+.logout {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/logout.png")
+    no-repeat !important;
+}
+
+.platform {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/platform.png")
+    no-repeat !important;
+}
+
+.uus {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/uus.png")
+    no-repeat !important;
+}
+
+.home {
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/home.png" )
+     no-repeat !important;
+}
+.usedfunc {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usedfunc.png" )
+     no-repeat !important;
+}
+.portal {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/portal.png" )
+     no-repeat !important;
+}
+.usedfuncmaint {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usedfuncmaint.png" )
+     no-repeat !important;vertical-align:middle;
+}
+.frameMgr {
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/frameMgr.png" )
+     no-repeat !important;
+}
+/*系统公告管理*/
+.afficheMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/afficheMgr.png" )
+     no-repeat !important;vertical-align:middle;
+}
+.moduleOp {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/moduleOp.png" )
+     no-repeat !important;vertical-align:middle;
+}
+.dicMgr {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/dicMgr.png" )
+     no-repeat !important;
+}
+.typeDicMgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/typeDicMgr.png" )
+     no-repeat !important;
+}
+.pageDicMgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/pageDicMgr.png" )
+     no-repeat !important;
+}
+.systemMgr {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/systemMgr.png" )
+     no-repeat !important;
+}
+/*编码管理*/
+.codMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/codMgr.png" )
+     no-repeat !important;
+}
+/*调度管理*/
+.schedulerMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/scheduler.png" )
+     no-repeat !important;
+}
+/*省市地区*/
+.priCityMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/priCityMgr.png" )
+     no-repeat !important;
+}
+/*省市地区title*/
+.priCityMgrTitle {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/priCityMgr.png" )
+     no-repeat !important;
+}
+/*系统参数管理*/
+.systemParaMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/systemParaMgr.png" )
+     no-repeat !important;
+}
+/*数据库备份管理*/
+.dbBkReMgr{
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/dbBkReMgr.png" )
+     no-repeat !important;
+}
+/*数据库备份管理title*/
+.dbBkReMgrTitle{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/dbBkReMgr.png" )
+     no-repeat !important;
+}
+.logMgr {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/logMgr.png" )
+     no-repeat !important;
+}
+/*系统配置管理*/
+.sysConMgr{
+	 width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/sysConMgr.png" )
+     no-repeat !important;
+}
+/*系统日志管理*/
+.sysLogMgr{
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/sysLogMgr.png" )
+     no-repeat !important;
+}
+.pageFun {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/pageFun.png" )
+     no-repeat !important;
+}
+.pagePattern {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/pagePattern.png" )
+     no-repeat !important;
+}
+.moduleMgr {
+	 width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/moduleMgr.png" )
+     no-repeat !important;
+}
+.oprateMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/oprateMgr.png" )
+     no-repeat !important;
+}
+.rightKeyCloseTab {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rightKeyCloseTab.png" )
+     no-repeat !important;
+}
+.skinSelected {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/skinSelected.png" )
+     no-repeat !important;
+}
+.qq {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/qq.png" )
+     no-repeat !important;
+}
+.table_add {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_add.png" )
+     no-repeat !important;
+}
+.table_edit {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_edit.png" )
+     no-repeat !important;
+}
+.table_delete {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_delete.png" )
+     no-repeat !important;
+}
+.table {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table.png" )
+     no-repeat !important;
+}
+.table_save {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_save.png" )
+     no-repeat !important;
+}
+.table_close {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_close.png" )
+     no-repeat !important;
+}
+.table_multiple {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_multiple.png" )
+     no-repeat !important;
+}
+.table_find {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_find.png" )
+     no-repeat !important;
+}
+
+.left_arrow {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/left_arrow.gif" )
+     no-repeat !important;
+}
+
+.right_arrow {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/right_arrow.gif" )
+     no-repeat !important;
+}
+.enable {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/enable.png" )
+     no-repeat !important;
+}
+.disable {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/disable.png" )
+     no-repeat !important;
+}
+.assign {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/assign.png" )
+     no-repeat !important;
+}
+.login {
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/login.png")
+    no-repeat !important;
+}
+.close {
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/close.png")
+    no-repeat !important;
+}
+.word {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/word.gif" )
+     no-repeat !important;
+}
+.excel {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/excel.gif" )
+     no-repeat !important;
+}
+.powerpoint {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/powerpoint.gif" )
+     no-repeat !important;
+}
+.pdf {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/pdf.gif" )
+     no-repeat !important;
+}
+.withoutformat {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/withoutformat.gif" )
+     no-repeat !important;
+}
+.module_label {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/module_label.png" )
+     no-repeat !important;
+}
+.save_time {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/save_time.png" )
+     no-repeat !important;
+}
+/*调度启动*/
+.scheduler_start {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/scheduler_start.png" )
+     no-repeat !important;
+}
+/*调度停止*/
+.scheduler_stop {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/scheduler_stop.png" )
+     no-repeat !important;
+}
+/*调度启动*/
+.job_start {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/job_start.png" )
+     no-repeat !important;
+}
+/*调度停止*/
+.job_stop {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/job_stop.png" )
+     no-repeat !important;
+}
+/*图片局中*/
+.middle{
+ vertical-align:middle;
+}
+
+/*---------------------------------统一用户-----------------------------------*/
+/*机构信息管理*/
+.organmgr {
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/organmgr.png" )
+     no-repeat !important;
+}
+/*机构信息管理title*/
+.organmgrtitle {
+     vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/organmgr.png" )
+     no-repeat !important;
+}
+/*角色信息管理*/
+.rolemgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rolemgr.png" )
+     no-repeat !important;
+}
+/*角色信息管理title*/
+.rolemgrtitle{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rolemgr.png" )
+     no-repeat !important;
+}
+/*角色分配管理*/
+.roleassignmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/roleassignmgr.png" )
+     no-repeat !important;
+}
+/*用户信息管理*/
+.usermgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usermgr.png" )
+     no-repeat !important;
+}
+/*用户信息管理*/
+.usermgrtitle{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usermgr.png" )
+     no-repeat !important;
+}
+/*用户名*/
+.username{
+	background-color:#FFFFFF;
+	padding-left:20px;
+	font-weight:bold;
+	color:#000033;
+	background: url(../img/menu/usermgr.png) no-repeat !important;
+}
+.groupmgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/groupmgr.png" )
+     no-repeat !important;
+}
+/*用户组*/
+.usergroupmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usergroupmgr.png" )
+     no-repeat !important;
+}
+/*普通组*/
+.gernalgroupmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/gernalgroupmgr.png" )
+     no-repeat !important;
+}
+/*角色组*/
+.rolegroupmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rolegroupmgr.png" )
+     no-repeat !important;
+}
+
+/*用户密码*/
+.password{
+	background-color:#FFFFFF;
+	padding-left:20px;
+	font-weight:bold;
+	color:#000033;
+	background: url(../img/menu/privialmgr.png) no-repeat !important;
+}
+.resetpwd{
+	background: url(../img/menu/resetpwd.png) no-repeat !important;
+}
+/*行权限*/
+.privialmgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/privialmgr.png" )
+     no-repeat !important;
+}
+.modoptprimgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/modoptprimgr.png" )
+     no-repeat !important;
+}
+.rowprimgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rowprimgr.png" )
+     no-repeat !important;
+}

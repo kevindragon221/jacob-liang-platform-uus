@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemConfig>
+	<logger>
+		<!--
+			0:为关闭;
+			1:为增、删、改
+			2:为删、改、其它一些逻辑操作
+			3:为删
+		 -->
+		<level>1</level>
+	</logger>
+	<!-- 日志保存天数 -->
+	<logKeepDays>
+		<days>30</days>
+	</logKeepDays>
+	<roleChange>
+		<!-- 
+			login：为系统登录时用户选择角色
+			insystem：为进入系统后切换角色
+		 -->
+		<type>insystem</type>
+	</roleChange>
+	<!-- 系统管理员列表 -->
+	<systemMgr>
+		<userCode>admin</userCode>
+		<userCode>jacob</userCode>
+	</systemMgr>
+	<!-- 系统名称 -->
+	<systemName>
+		<name>my协同办公管理系统</name>
+	</systemName>
+</systemConfig>

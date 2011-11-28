@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<javaScripts>
+		<javaScript>./js/com/bhtec/view/business/platform/systemconfig/SystemConfigVOp.js</javaScript>
+	</javaScripts>
+	<fieldNames>
+		<field name="logLevelSet">日志级别设置</field>
+		<field name="roleChagneSet">角色切换设置</field>
+		<field name="systemAdminSet">系统管理员设置</field>
+		<field name="systemNameSet">系统名称设置</field>
+		<field name="logKeepDays">日志保留天数设置</field>
+	</fieldNames>
+</module>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<javaScripts>
+		<javaScript>./js/com/bhtec/view/business/platform/systemparameter/SystemParameterList.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/platform/systemparameter/SystemParameterVOp.js</javaScript>
+	</javaScripts>
+	<fieldNames>
+		<field name="paraName">参数名称</field>
+		<field name="paraKeyName">参数键名称</field>
+		<field name="paraValue">参数键值</field>
+		<field name="paraType">系统类别</field>
+		<field name="status">参数状态</field>
+		<field name="memo">参数备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

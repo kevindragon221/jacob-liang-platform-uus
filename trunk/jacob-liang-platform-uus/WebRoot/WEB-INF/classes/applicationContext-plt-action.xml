@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- 基本信息 -->
+	<bean id="baseInfoAction" class="com.bhtec.action.commonused.BaseInfoAction" 
+		scope="prototype">
+	</bean>
+	<!-- 系统登录 -->
+	<bean id="loginAction" class="com.bhtec.action.login.LoginAction" 
+		scope="prototype">
+		<property name="loginService" ref="loginService"></property>
+	</bean>
+	<!-- 平台基础action -->
+	<bean id="platformBaseAction" class="com.bhtec.action.platform.PlatformBaseAction" 
+		scope="prototype">
+		<property name="baseService" ref="baseService"></property>
+	</bean>
+	<!-- 主框架功能区维护action -->
+	<bean id="mainFrameFunAction" class="com.bhtec.action.platform.mainframefun.MainFrameFunAction" 
+		scope="prototype">
+		<property name="mainFrameFunService" ref="mainFrameFunService"></property>
+	</bean>
+	<!-- 主框架维护action -->
+	<bean id="userPageLayoutAction" class="com.bhtec.action.commonused.UserPageLayoutAction" 
+		scope="prototype">
+		<property name="userPageLayoutService" ref="userPageLayoutService"></property>
+	</bean>
+	<!-- 用户常用功能action -->
+	<bean id="userCommFunAction" class="com.bhtec.action.commonused.UserCommFunAction" 
+		scope="prototype">
+		<property name="userCommFunService" ref="userCommFunService"></property>
+	</bean>
+	<!-- 模块维护action -->
+	<bean id="moduleAction" class="com.bhtec.action.platform.module.ModuleAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="moduleService" ref="moduleService"></property>
+	</bean>
+	<!-- 模块操作维护action -->
+	<bean id="moduleOptAction" class="com.bhtec.action.platform.moduleopt.ModuleOptAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="moduleOptService" ref="moduleOptService"></property>
+	</bean>
+	<!-- 系统配置action -->
+	<bean id="systemConfigAction" class="com.bhtec.action.platform.systemconfig.SystemConfigAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="systemConfigService" ref="systemConfigService"></property>
+	</bean>
+	<!-- 公告action -->
+	<bean id="afficheAction" class="com.bhtec.action.platform.affiche.AfficheAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="afficheService" ref="afficheService"></property>
+		<property name="accessoryService" ref="accessoryService"></property>
+	</bean>
+	<!-- 附件action -->
+	<bean id="accessoryAction" class="com.bhtec.action.platform.accessory.AccessoryAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="accessoryService" ref="accessoryService"></property>
+	</bean>
+	<!-- 系统参数action -->
+	<bean id="systemParameterAction" class="com.bhtec.action.platform.systemparameter.SystemParameterAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="systemParameterService" ref="systemParameterService"></property>
+	</bean>
+	<!-- 类别字典action -->
+	<bean id="typeDictionaryAction" class="com.bhtec.action.platform.typedictionary.TypeDictionaryAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="typeDictionaryService" ref="typeDictionaryService"></property>
+	</bean>
+	<!-- 地区action -->
+	<bean id="districtAction" class="com.bhtec.action.platform.district.DistrictAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="districtService" ref="districtService"></property>
+	</bean>
+	<!-- 日志action -->
+	<bean id="loggerAction" class="com.bhtec.action.platform.logger.LoggerAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="sysPlLoggerService" ref="sysPlLoggerService"></property>
+	</bean>
+	<!-- 编码action -->
+	<bean id="codeAction" class="com.bhtec.action.platform.code.CodeAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="codeService" ref="codeService"></property>
+	</bean>
+	<!-- 调度action -->
+	<bean id="schedulerAction" class="com.bhtec.action.platform.scheduler.SchedulerAction" 
+		scope="prototype" parent="platformBaseAction">
+		<property name="schedulerService" ref="schedulerService"></property>
+	</bean>
+</beans>	

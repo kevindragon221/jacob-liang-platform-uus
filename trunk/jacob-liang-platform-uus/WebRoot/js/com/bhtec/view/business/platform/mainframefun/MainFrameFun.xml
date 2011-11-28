@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module> 
+  <javaScripts> 
+    <javaScript>./js/com/bhtec/view/business/platform/mainframefun/MainFrameFunList.js</javaScript>  
+    <javaScript>./js/com/bhtec/view/business/platform/mainframefun/MainFrameFunVOp.js</javaScript> 
+  </javaScripts>  
+  <fieldNames> 
+    <field name="funName">功能区名称</field>  
+    <field name="funURI">资源URI</field>  
+    <field name="funMemo">功能区备注</field> 
+  </fieldNames>  
+  <funArea> 
+    <area> 
+      <funId>20</funId>  
+      <funName>header</funName>  
+      <funURI>winxp</funURI>  
+      <funMemo>页面北部XP风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>21</funId>  
+      <funName>navigate</funName>  
+      <funURI>winxp</funURI>  
+      <funMemo>页面导航XP风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>22</funId>  
+      <funName>outlookBar</funName>  
+      <funURI>winxp</funURI>  
+      <funMemo>页面菜单XP风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>23</funId>  
+      <funName>stateBar</funName>  
+      <funURI>winxp</funURI>  
+      <funMemo>状态栏XP风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>24</funId>  
+      <funName>mainPage</funName>  
+      <funURI>winxp</funURI>  
+      <funMemo>主页XP风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>25</funId>  
+      <funName>stateBar</funName>  
+      <funURI>general</funURI>  
+      <funMemo>状态栏普通风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>26</funId>  
+      <funName>outlookBar</funName>  
+      <funURI>general</funURI>  
+      <funMemo>菜单普通风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>27</funId>  
+      <funName>header</funName>  
+      <funURI>general</funURI>  
+      <funMemo>北部普通风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>28</funId>  
+      <funName>navigate</funName>  
+      <funURI>general</funURI>  
+      <funMemo>导航普通风格</funMemo> 
+    </area>  
+    <area>
+      <funId>29</funId>
+      <funName>mainPage</funName>
+      <funURI>general</funURI>
+      <funMemo>主页普通风格</funMemo>
+    </area>
+  </funArea> 
+</module>

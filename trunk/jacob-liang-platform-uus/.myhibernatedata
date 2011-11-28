@@ -1,0 +1,22 @@
+#
+#Sat Jan 22 14:22:48 CST 2011
+genBasicCompId=false
+sessionFactoryName=
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=/bhtchPltUus/hibernate.reveng.xml
+configFile=/bhtchPlatform/pltsrc/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true

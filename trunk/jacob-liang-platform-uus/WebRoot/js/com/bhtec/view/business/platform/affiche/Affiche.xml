@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module> 
+  <javaScripts> 
+    <javaScript>./js/com/bhtec/view/business/platform/affiche/AfficheList.js</javaScript>  
+    <javaScript>./js/com/bhtec/view/business/platform/affiche/AfficheVOp.js</javaScript> 
+  </javaScripts>  
+  <fieldNames> 
+    <field name="afficheTitle">公告标题</field>  
+    <field name="afficheInvalidate">有效日期</field>  
+    <field name="affichePulish">是否发布</field> 
+    <field name="afficheContent">公告正文</field>
+    <field name="afficheAccessory">公告附件</field>
+  </fieldNames>  
+</module>

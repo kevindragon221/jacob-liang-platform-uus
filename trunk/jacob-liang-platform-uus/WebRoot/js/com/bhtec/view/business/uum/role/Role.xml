@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<javaScripts>
+		<javaScript>./js/com/bhtec/view/business/uum/role/RoleList.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/role/RoleVOp.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/role/RoleAssignModOpt.js</javaScript>
+	</javaScripts>
+	<fieldNames>
+		<field name="roleName">角色名称</field>
+		<field name="roleLevel">角色级别</field>
+		<field name="status">角色状态</field>
+		<field name="memo">备注</field>
+		<field name="creator">创建人</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

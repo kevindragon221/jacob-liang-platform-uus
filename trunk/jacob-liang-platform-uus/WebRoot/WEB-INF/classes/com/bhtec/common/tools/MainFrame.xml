@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module> 
+  <javaScripts> 
+    <javaScript>./js/com/bhtec/view/business/mainframefun/MainFrameList.js</javaScript>  
+    <javaScript>./js/com/bhtec/view/business/mainframefun/MainFrameVOp.js</javaScript> 
+  </javaScripts>  
+  <fieldNames> 
+    <field name="funName">abc</field>  
+    <field name="funURI">功能区资源URI</field>  
+    <field name="funStatus">功能区状态</field>  
+    <field name="funMemo">功能区备注</field> 
+  </fieldNames>  
+  <totalRecords>4</totalRecords>  
+  <funArea> 
+    <area> 
+      <funId>5</funId>  
+      <funName>header</funName>  
+      <funURI>com.bhtec.view.viewport.BhtHeader</funURI>  
+      <funStatus>enable</funStatus>  
+      <funMemo>页面北部</funMemo> 
+    </area>  
+    <area> 
+      <funId>2</funId>  
+      <funName>outlookBar</funName>  
+      <funURI>com.bhtec.view.viewport.BhtOutlookBar</funURI>  
+      <funStatus>enable</funStatus>  
+      <funMemo>页面西部</funMemo> 
+    </area>  
+    <area> 
+      <funId>3</funId>  
+      <funName>mainPage</funName>  
+      <funURI>com.bhtec.view.viewport.BhtMainPage</funURI>  
+      <funStatus>enable</funStatus>  
+      <funMemo>页面中部</funMemo> 
+    </area>  
+    <area> 
+      <funId>4</funId>  
+      <funName>stateBar</funName>  
+      <funURI>com.bhtec.view.viewport.BhtStateBar</funURI>  
+      <funStatus>enable</funStatus>  
+      <funMemo>页面南部</funMemo> 
+    </area> 
+  </funArea> 
+</module>

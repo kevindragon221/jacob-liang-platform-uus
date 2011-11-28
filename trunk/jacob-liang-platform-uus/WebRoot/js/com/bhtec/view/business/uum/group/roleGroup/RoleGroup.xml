@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<javaScripts>
+		<javaScript>./js/com/bhtec/view/business/uum/group/roleGroup/RoleGroupList.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/group/roleGroup/RoleGroupVOp.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/group/MultiSelect.js</javaScript>
+		<javaScript>./js/com/bhtec/view/business/uum/group/roleGroup/RoleGroupMember.js</javaScript>
+		<javaScript>./ext/ux/grid/RowExpander.js</javaScript>
+	</javaScripts>
+	<fieldNames>
+		<field name="groupName">组名称</field>
+		<field name="status">组状态</field>
+		<field name="memo">组备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+		<field name="organ">机构</field>
+		<field name="roleName">角色名</field>
+		<field name="roleMemo">角色备注</field>
+		<field name="roleGroupInfoAdd">角色组信息添加</field>
+		<field name="roleGroupAdd">角色组成员添加</field>
+	</fieldNames>
+</module>

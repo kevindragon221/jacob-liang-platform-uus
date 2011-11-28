@@ -1,0 +1,5 @@
+#Mon May 16 11:29:07 CST 2011
+eclipse.preferences.version=1
+encoding//WebRoot/fetchDBbackup.bat=GBK
+encoding//WebRoot/postgresqlDdBackup.bat=GBK
+encoding/<project>=UTF-8

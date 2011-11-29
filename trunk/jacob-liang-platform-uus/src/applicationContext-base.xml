@@ -45,18 +45,18 @@
 			</props>
 		</property>
 
-		<property name="mappingJarLocations">
+		<!--property name="mappingJarLocations">
 			<list>
 				<value>WEB-INF/lib/bhtsys.jar</value>
 			</list>
-		</property>
+		</property-->
 
-		<!--property name="mappingDirectoryLocations">
+		<property name="mappingDirectoryLocations">
 			<list>
 				<value>classpath:com/bhtec/domain/pojo/platform</value>
 				<value>classpath:com/bhtec/domain/pojo/uum</value>
 			</list>
-		</property-->
+		</property>
 	</bean>
 
 	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->

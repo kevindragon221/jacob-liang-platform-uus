@@ -1,0 +1,638 @@
+
+.font12 {font-size: 12px;}
+.systitle {
+		font-family: "隶书";
+		font-size: 36px;
+		color: #FFFFFF;
+}
+.background{
+   border:0 none;
+   background:#1E4176 url(./img/bht.png) repeat-x 0 0;
+  
+}
+.currPosition {
+	padding-left:20px;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/currPosition.png")
+    no-repeat !important;
+}
+.help {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/help.png")
+    no-repeat !important;
+}
+.change_skin {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/change_skin.png")
+    no-repeat !important;
+}
+
+.user_edit {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/user_edit.png")
+    no-repeat !important;
+}
+
+.logout {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/logout.png")
+    no-repeat !important;
+}
+
+.platform {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/platform.png")
+    no-repeat !important;
+}
+
+.uus {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/uus.png")
+    no-repeat !important;
+}
+
+.home {
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/home.png" )
+     no-repeat !important;
+}
+.usedfunc {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usedfunc.png" )
+     no-repeat !important;
+}
+.portal {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/portal.png" )
+     no-repeat !important;
+}
+.usedfuncmaint {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usedfuncmaint.png" )
+     no-repeat !important;vertical-align:middle;
+}
+.frameMgr {
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/frameMgr.png" )
+     no-repeat !important;
+}
+/*系统公告管理*/
+.afficheMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/afficheMgr.png" )
+     no-repeat !important;vertical-align:middle;
+}
+.moduleOp {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/moduleOp.png" )
+     no-repeat !important;vertical-align:middle;
+}
+.dicMgr {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/dicMgr.png" )
+     no-repeat !important;
+}
+.typeDicMgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/typeDicMgr.png" )
+     no-repeat !important;
+}
+.pageDicMgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/pageDicMgr.png" )
+     no-repeat !important;
+}
+.systemMgr {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/systemMgr.png" )
+     no-repeat !important;
+}
+/*编码管理*/
+.codMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/codMgr.png" )
+     no-repeat !important;
+}
+/*调度管理*/
+.schedulerMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/scheduler.png" )
+     no-repeat !important;
+}
+/*省市地区*/
+.priCityMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/priCityMgr.png" )
+     no-repeat !important;
+}
+/*省市地区title*/
+.priCityMgrTitle {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/priCityMgr.png" )
+     no-repeat !important;
+}
+/*系统参数管理*/
+.systemParaMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/systemParaMgr.png" )
+     no-repeat !important;
+}
+/*数据库备份管理*/
+.dbBkReMgr{
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/dbBkReMgr.png" )
+     no-repeat !important;
+}
+/*数据库备份管理title*/
+.dbBkReMgrTitle{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/dbBkReMgr.png" )
+     no-repeat !important;
+}
+.logMgr {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/logMgr.png" )
+     no-repeat !important;
+}
+/*系统配置管理*/
+.sysConMgr{
+	 width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/sysConMgr.png" )
+     no-repeat !important;
+}
+/*系统日志管理*/
+.sysLogMgr{
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/sysLogMgr.png" )
+     no-repeat !important;
+}
+.pageFun {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/pageFun.png" )
+     no-repeat !important;
+}
+.pagePattern {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/pagePattern.png" )
+     no-repeat !important;
+}
+.moduleMgr {
+	 width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/moduleMgr.png" )
+     no-repeat !important;
+}
+.oprateMgr {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/oprateMgr.png" )
+     no-repeat !important;
+}
+.rightKeyCloseTab {
+	width:15px;height:15px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rightKeyCloseTab.png" )
+     no-repeat !important;
+}
+.skinSelected {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/skinSelected.png" )
+     no-repeat !important;
+}
+.qq {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/navigate/qq.png" )
+     no-repeat !important;
+}
+.table_add {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_add.png" )
+     no-repeat !important;
+}
+.table_edit {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_edit.png" )
+     no-repeat !important;
+}
+.table_delete {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_delete.png" )
+     no-repeat !important;
+}
+.table {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table.png" )
+     no-repeat !important;
+}
+.table_save {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_save.png" )
+     no-repeat !important;
+}
+.table_close {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_close.png" )
+     no-repeat !important;
+}
+.table_multiple {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_multiple.png" )
+     no-repeat !important;
+}
+.table_find {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/table_find.png" )
+     no-repeat !important;
+}
+
+.left_arrow {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/left_arrow.gif" )
+     no-repeat !important;
+}
+
+.right_arrow {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/right_arrow.gif" )
+     no-repeat !important;
+}
+.enable {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/enable.png" )
+     no-repeat !important;
+}
+.disable {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/disable.png" )
+     no-repeat !important;
+}
+.assign {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/assign.png" )
+     no-repeat !important;
+}
+.login {
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/login.png")
+    no-repeat !important;
+}
+.close {
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/close.png")
+    no-repeat !important;
+}
+.word {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/word.gif" )
+     no-repeat !important;
+}
+.excel {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/excel.gif" )
+     no-repeat !important;
+}
+.powerpoint {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/powerpoint.gif" )
+     no-repeat !important;
+}
+.pdf {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/pdf.gif" )
+     no-repeat !important;
+}
+.withoutformat {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/withoutformat.gif" )
+     no-repeat !important;
+}
+.module_label {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/module_label.png" )
+     no-repeat !important;
+}
+.save_time {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/save_time.png" )
+     no-repeat !important;
+}
+/*调度启动*/
+.scheduler_start {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/scheduler_start.png" )
+     no-repeat !important;
+}
+/*调度停止*/
+.scheduler_stop {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/scheduler_stop.png" )
+     no-repeat !important;
+}
+/*调度启动*/
+.job_start {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/job_start.png" )
+     no-repeat !important;
+}
+/*调度停止*/
+.job_stop {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/button/job_stop.png" )
+     no-repeat !important;
+}
+/*图片局中*/
+.middle{
+ vertical-align:middle;
+}
+
+/*---------------------------------统一用户-----------------------------------*/
+/*机构信息管理*/
+.organmgr {
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/organmgr.png" )
+     no-repeat !important;
+}
+/*机构信息管理title*/
+.organmgrtitle {
+     vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/organmgr.png" )
+     no-repeat !important;
+}
+/*角色信息管理*/
+.rolemgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rolemgr.png" )
+     no-repeat !important;
+}
+/*角色信息管理title*/
+.rolemgrtitle{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rolemgr.png" )
+     no-repeat !important;
+}
+/*角色分配管理*/
+.roleassignmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/roleassignmgr.png" )
+     no-repeat !important;
+}
+/*用户信息管理*/
+.usermgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usermgr.png" )
+     no-repeat !important;
+}
+/*用户信息管理*/
+.usermgrtitle{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usermgr.png" )
+     no-repeat !important;
+}
+/*用户名*/
+.username{
+	background-color:#FFFFFF;
+	padding-left:20px;
+	font-weight:bold;
+	color:#000033;
+	vertical-align:middle;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usermgr.png" )
+     no-repeat !important;
+}
+.groupmgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/groupmgr.png" )
+     no-repeat !important;
+}
+/*用户组*/
+.usergroupmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/usergroupmgr.png" )
+     no-repeat !important;
+}
+/*普通组*/
+.gernalgroupmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/gernalgroupmgr.png" )
+     no-repeat !important;
+}
+/*角色组*/
+.rolegroupmgr{
+	width:15px;height:15px;vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rolegroupmgr.png" )
+     no-repeat !important;
+}
+
+/*用户密码*/
+.password{
+	background-color:#FFFFFF;
+	padding-left:20px;
+	font-weight:bold;
+	color:#000033;
+	width:15px;
+	height:15px;
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/privialmgr.png" )
+     no-repeat !important;
+}
+.resetpwd{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/resetpwd.png" )
+     no-repeat !important;
+}
+/*行权限*/
+.privialmgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/privialmgr.png" )
+     no-repeat !important;
+}
+.modoptprimgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/modoptprimgr.png" )
+     no-repeat !important;
+}
+.rowprimgr{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/rowprimgr.png" )
+     no-repeat !important;
+}
+.userdelete{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/user_delete.png" )
+     no-repeat !important;
+}
+.emailgo{
+	vertical-align:middle;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src="./img/menu/email_go.png" )
+     no-repeat !important;
+}
+/*------------datetime css-----------*/
+.minutecss {
+	padding: 4px;
+	height: 100%;
+	border-top: 1px solid #a3bad9;
+	background: #dfecfb
+		url(../../resources//images/default/shared/glass-bg.gif) repeat-x left
+		top;
+}
+
+.y-hour-middle,.y-hour-left,.y-hour-right {
+	font: bold 11px "sans serif", tahoma, verdana, helvetica;
+	overflow: hidden;
+}
+
+.y-hour-right,.y-hour-left {
+	width: 18px;
+}
+
+.y-hour-right {
+	text-align: right;
+}
+
+.y-hour-middle {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #0000ff;
+}
+
+.y-hour-right a,.y-hour-left a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.y-hour-right a {
+	background-image: url(images/arrowRight.gif);
+	margin-right: 2px;
+}
+
+.y-hour-left a {
+	background-image: url(images/arrowLeft.gif);
+	margin-left: 2px;
+}
+
+.y-minute-middle,.y-minute-left,.y-minute-right {
+	font: bold 11px "sans serif", tahoma, verdana, helvetica;
+	overflow: hidden;
+}
+
+.y-minute-right,.y-minute-left {
+	width: 18px;
+}
+
+.y-minute-right {
+	text-align: right;
+}
+
+.y-minute-middle {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #0000ff;
+}
+
+.y-minute-right a,.y-minute-left a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.y-minute-right a {
+	background-image: url(images/arrowRight.gif);
+	margin-right: 2px;
+}
+
+.y-minute-left a {
+	background-image: url(images/arrowLeft.gif);
+	margin-left: 2px;
+}
+
+/* 秒的样式 */
+.y-second-middle,.y-second-left,.y-second-right {
+	font: bold 11px "sans serif", tahoma, verdana, helvetica;
+	overflow: hidden;
+}
+
+.y-second-right,.y-second-left {
+	width: 18px;
+}
+
+.y-second-right {
+	text-align: right;
+}
+
+.y-second-middle {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #0000ff;
+}
+
+.y-second-right a,.y-second-left a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.y-second-right a {
+	background-image: url(images/arrowRight.gif);
+	margin-right: 2px;
+}
+
+.y-second-left a {
+	background-image: url(images/arrowLeft.gif);
+	margin-left: 2px;
+}
+
+/* 按钮样式 */
+.x-date-today{
+    padding:4px;
+    /* border-top: 1px solid #a3bad9; */
+    background: #dfecfb url(../images/default/shared/glass-bg.gif) repeat-x left top;
+}
+
+/* 小时与分钟分隔符 */  
+.hour-minute{  
+    vertical-align: middle;   
+}  
+
+/*------------multiselect css-----------*/
+.ux-MultiSelect-icon { width:16px; height:16px; float:left; background-position: -1px -1px ! important; background-repeat:no-repeat ! important; }
+.ux-MultiSelect-icon-checked { background: transparent url(./ext/resourcesc/images/default/menu/checked.gif); }
+.ux-MultiSelect-icon-unchecked { background: transparent url(./ext/resourcesc/images/default/menu/unchecked.gif); }
+.ux-mselect{
+    overflow:auto;
+    background:white;
+    position:relative; /* for calculating scroll offsets */
+    zoom:1;
+    overflow:auto;	
+}
+.ux-mselect-item{
+    font:normal 12px tahoma, arial, helvetica, sans-serif;
+    padding:2px;
+    border:1px solid #fff;
+    white-space: nowrap;
+    cursor:pointer;
+}
+.ux-mselect-selected{
+	border:1px dotted #a3bae9 !important;
+    background:#DFE8F6;
+    cursor:pointer;
+}
+
+.x-view-drag-insert-above { 
+    border-top:1px dotted #3366cc; 
+} 
+.x-view-drag-insert-below { 
+    border-bottom:1px dotted #3366cc; 
+}  
+/*------------portal css-----------*/
+.x-portal .x-panel-dd-spacer {
+    margin-bottom:10px;
+}
+
+.x-portlet {
+    margin-bottom:10px;
+}
+
+/* Clean up the look of the portlets */
+.x-portlet .x-panel-ml {
+    padding-left:2px;
+}
+.x-portlet .x-panel-mr {
+    padding-right:2px;
+}
+.x-portlet .x-panel-bl {
+    padding-left:2px;
+}
+
+.x-portlet .x-panel-br {
+    padding-right:2px;
+}
+.x-portlet .x-panel-body {
+    background:white;
+}
+.x-portlet .x-panel-mc {
+    padding-top:2px;
+}
+.x-portlet .x-panel-bc .x-panel-footer {
+    padding-bottom:2px;
+}
+.x-portlet .x-panel-nofooter .x-panel-bc {
+    height:2px;
+}
+/*------------spinner css-----------*/
+.x-form-spinner-proxy{
+	/*background-color:#ff00cc;*/
+}
+.x-form-field-wrap .x-form-spinner-trigger {
+    background:transparent url('spinner.gif') no-repeat 0 0;
+}
+
+.x-form-field-wrap .x-form-spinner-overup{
+    background-position:-17px 0;
+}
+.x-form-field-wrap .x-form-spinner-clickup{
+    background-position:-34px 0;
+}
+.x-form-field-wrap .x-form-spinner-overdown{
+    background-position:-51px 0;
+}
+.x-form-field-wrap .x-form-spinner-clickdown{
+    background-position:-68px 0;
+}
+
+
+.x-trigger-wrap-focus .x-form-spinner-trigger{
+    background-position:-10px 0;
+}
+.x-trigger-wrap-focus .x-form-spinner-overup{
+    background-position:-102px 0;
+}
+.x-trigger-wrap-focus .x-form-spinner-clickup{
+    background-position:-119px 0;
+}
+.x-trigger-wrap-focus .x-form-spinner-overdown{
+    background-position:-136px 0;
+}
+.x-trigger-wrap-focus .x-form-spinner-clickdown{
+    background-position:-153px 0;
+}
+.x-trigger-wrap-focus .x-form-trigger{
+    border-bottom: 1px solid #7eadd9;
+}
+
+.x-form-field-wrap .x-form-spinner-splitter {
+	line-height:2px;
+	font-size:1px;
+    background:transparent url('spinner-split.gif') no-repeat 0 0;
+	position:absolute;
+	cursor: n-resize;
+}
+.x-trigger-wrap-focus .x-form-spinner-splitter{
+    background-position:-14px 0;
+}

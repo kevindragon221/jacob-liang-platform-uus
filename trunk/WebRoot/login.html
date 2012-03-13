@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//rtDTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<!-- ext相关开始 -->
+  	<link rel="stylesheet" type="text/css" href="ext/resources/css/ext-all.css">
+  	<script type="text/javascript" src="ext/adapter/ext/ext-base.js"></script>
+  	<script type="text/javascript" src="ext/ext-all.gzjs"></script>
+  	<script type="text/javascript" src="ext/ext-lang-zh_CN.js"></script>
+  	<style type="text/css">
+	<!--
+	#copyright {
+		position:absolute;
+		bottom:0px;
+		left:40%;
+		color:red;
+	}-->
+	</style>
+  	
+  	<!-- ext相关结束-->
+  	<script type="text/javascript" src="js/com/bhtec/view/Login.js"></script>
+  	<script type="text/javascript">
+  		Ext.BLANK_IMAGE_URL = 'ext/resources/images/default/s.gif';
+  		Ext.QuickTips.init();
+  		Ext.form.Field.prototype.msgTarget = 'side';
+  		if(navigator.appName == "Microsoft Internet Explorer"){ 
+           if(navigator.appVersion.match(/6./i)=='6.'){
+                  document.write('<link rel="stylesheet" type="text/css" href="./ext/ux/css/bhtIE6.css">');
+           }else{
+                 document.write('<link rel="stylesheet" type="text/css" href="./ext/ux/css/bhtIE7.css">');
+           }
+    	}else{
+    		document.write('<link rel="stylesheet" type="text/css" href="./ext/ux/css/bhtIE7.css">');
+    	}
+  		Ext.onReady(function(){
+  				Ext.util.CSS.swapStyleSheet('theme', 'ext/resources/css/xtheme-human.css');
+				new com.bhtec.view.Login();				
+		}
+		);
+  	</script>
+    <title></title>
+  </head>
+  
+  <body  style="background-image:url(img/bht.png)">
+  </body> 
+ <div  id="copyright">Copyright © (2011-2012) jacob_liang </div>
+</html>

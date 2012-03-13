@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/platform/module/ModuleList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.module.ModuleList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrlShare>./ext/ux/multiselect/DDView.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/multiselect/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/platform/module/ModuleVOp.js</jsUrl>
+			<jsUrl>./js/com/bhtec/view/business/platform/module/ModuleAssignOptVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.module.ModuleVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="modName">模块名称</field>
+		<field name="modEnId">模块ID</field>
+		<field name="modImgCls">模块图片样式</field>
+		<field name="modLevel">模块级别</field>
+		<field name="modOrder">模块顺序</field>
+		<field name="belongToSys">所属系统</field>
+		<field name="modPageType">页面类型</field>
+		<field name="status">模块状态</field>
+		<field name="memo">模块备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+		<field name="upModule">上级模块</field>
+	</fieldNames>
+</module>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="start" name="project" basedir=".">
+
+	<target name="start" depends="project_backup">
+	</target>
+	
+	<target name="project_backup" >
+		<echo message="------------------系统备份开始---------------------"/>
+		<ant antfile="project_backup.xml" />
+		<echo message="------------------系统备份结束---------------------"/>
+		<echo message=""/>
+		<echo message=""/>
+		<echo message=""/>
+	</target>
+	<target name="project_deploy">
+		<echo message="------------------系统发布开始---------------------"/>
+		<ant antfile="project_deploy.xml" />
+		<echo message="------------------系统发布结束---------------------"/>
+		<echo message=""/>
+		<echo message=""/>
+		<echo message=""/>
+	</target>
+
+</project>

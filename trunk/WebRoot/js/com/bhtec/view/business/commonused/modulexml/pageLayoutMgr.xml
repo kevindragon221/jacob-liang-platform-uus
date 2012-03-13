@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module> 
+  <dynamicLoadJs>
+	<listView>
+		<jsUrl>./js/com/bhtec/view/business/commonused/userpagelayout/UserPageLayout.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.commonused.userpagelayout.UserPageLayout</jsMainClassName>
+	</listView>
+  </dynamicLoadJs>  
+  <fieldNames> 
+    <field name="header">页面头部</field>  
+    <field name="navigate">页面导航菜单</field>  
+    <field name="outlookBar">页面左侧菜单</field>  
+    <field name="mainPage">主页面</field>  
+    <field name="stateBar">页面状态栏</field> 
+  </fieldNames> 
+</module>

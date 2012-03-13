@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrlShare>./ext/ux/multiselect/DDView.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/multiselect/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/uum/user/UserAssignRole.js</jsUrl>
+			<jsUrl>./js/com/bhtec/view/business/uum/user/UserAssignModOpt.js</jsUrl>
+			<jsUrl>./js/com/bhtec/view/business/uum/user/UserAssignRowPrivilege.js</jsUrl>
+			<jsUrl>./js/com/bhtec/view/business/uum/user/UserList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.user.UserList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/uum/user/UserVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.user.UserVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="userCode">用户号</field>
+		<field name="userName">用户名</field>
+		<field name="userPassword">密码</field>
+		<field name="userGender">性别</field>
+		<field name="userPosition">职位</field>
+		<field name="userPhotoUrl">用户照片(单击照片删除)</field>
+		<field name="selectPhoto">选择照片</field>
+		<field name="userQq">用户QQ</field>
+		<field name="userMsn">用户MSN</field>
+		<field name="userMobile">用户手机</field>
+		<field name="userMobile2">用户手机2</field>
+		<field name="userOfficeTel">办公电话</field>
+		<field name="userFamilyTel">家庭电话</field>
+		<field name="userAddress">家庭住址</field>
+		<field name="userEmail">用户邮件</field>
+		<field name="userAvidate">用户有效期</field>
+		<field name="uumOrgan">所属机构</field>
+		<field name="uumRole">所属角色</field>
+		<field name="status">用户状态</field>
+		<field name="memo">备注</field>
+		<field name="creator">创建人</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

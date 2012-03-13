@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<script type="text/javascript" src="../../dwr/engine.js"></script>
+<script type="text/javascript" src="../../dwr/util.js"></script>
+<script type="text/javascript" src="../../dwr/interface/onlineCounter.js"></script>
+<script type="text/javascript" src="../../dwr/interface/baseInfoAction.js"></script>
+</head>
+<style type="text/css">
+.font12 {font-size: 12px;}
+body {margin:0;padding:0;}
+.cls_container{border:1px solid #ccc;width:700px;font-size:12px;height:24px;overflow:hidden;}
+.cls_container ul{list-style-type:none;margin:0;padding:0;margin-left:32px;}
+.cls_container ul li{height:24px;line-height:24px;width:320px;float:left;display:inline;}
+</style>
+<body scroll="no"   onkeydown="eventFun(event)" style="background-image:url(../../img/statebar/down.gif)"><!-- 去掉滚动条 -->
+	<table  cellSpacing=0 cellPadding=0 height=100%  width='100%' border=0>
+         <tr>
+           <td width=1%></td>
+       				<td width=15%><div id="onlineCounterDiv" align="right" class="font12"></div></td>
+           <td width=10%> 
+           	<div  class='font12'><div align='right'>最新公告：</div></div> 
+           </td>
+           <td width=54%>
+           	<div id="myscroll" class="cls_container">
+			 
+			</div>
+           </td>
+            <td width=20%> 
+            	<div style='display:inline;float:left;' class='font12'><img border=0 width=18 height=18 class=middle src='../../img/navigate/qq.png'/>状态：</div> 
+            	<div style='display:inline;float:left;' id = 'qqstatus'>
+            	</div>
+            </td>
+         </tr>
+       </table>
+<script type="text/javascript">
+function $(element){
+ if(arguments.length>1){
+  for(var i=0,length=arguments.length,elements=[];i<length;i++){
+   elements.push($(arguments[i]));
+  }
+  return elements;
+ }
+ if(typeof element=="string"){
+  return document.getElementById(element);
+ }else{
+  return element;
+ }
+}
+var Class={
+ create:function(){
+  return function(){
+   this.initialize.apply(this,arguments);
+  }
+ }
+}
+Function.prototype.bind=function(object){
+ var method=this;
+ return function(){
+  method.apply(object,arguments);
+ }
+}
+var Scroll=Class.create();
+
+Scroll.prototype={
+ initialize:function(element,height){
+  this.element=$(element);
+  this.element.innerHTML+=this.element.innerHTML;
+  this.height=height;
+  this.maxHeight=this.element.scrollHeight/2;
+  this.counter=0;
+  this.scroll();
+  this.timer="";
+  this.element.onmouseover=this.stop.bind(this);
+  this.element.onmouseout=function(){this.timer=setTimeout(this.scroll.bind(this),1000);}.bind(this);
+ },
+ scroll:function(){
+  if(this.element.scrollTop<this.maxHeight){
+   this.element.scrollTop++;
+   this.counter++;
+  }else{
+   this.element.scrollTop=0;
+   this.counter=0;
+  }
+  
+  if(this.counter<this.height){
+   this.timer=setTimeout(this.scroll.bind(this),20);
+  }else{
+   this.counter=0;
+   this.timer=setTimeout(this.scroll.bind(this),3000);
+  }
+ },
+ stop:function(){
+  clearTimeout(this.timer);
+ }
+}
+function afficheView(afficheId){
+	var screenWidth = screen.availWidth;
+    var screenHeight = screen.availHeight;
+    //showModalDialog
+	window.open('./affiche_view.html?afficheId='+afficheId, '',"directories=no,status=no,toobar=no,location=no,width="+(screenWidth/2+100)+",height="+(screenHeight/2+100)+",resizable=0,scrollbars=no,left="+(screenWidth/4-50)+",top="+(screenHeight/4-50)+"");
+}
+
+function refreshAffiche(){
+	DWREngine.setAsync(false);
+	baseInfoAction.findAllAfficheBeforeValidate(function(afficheList){
+		if(afficheList != null){
+			var stateHtml = "<ul>";
+			var stateHtmlLi = "";
+			for(i=0;i<afficheList.length;i++){
+				var afficheId = afficheList[i].afficheId;
+				stateHtmlLi += "<li><a href='JavaScript:afficheView("+afficheId+")'>"+afficheList[i].afficheTitle+" </a></li>"
+			}
+			if(afficheList.length%2 !=0){
+				stateHtmlLi += "<li></li>"
+			}
+			stateHtml += stateHtmlLi;
+			stateHtml += "</ul>";
+			document.getElementById('myscroll').innerHTML = stateHtml;
+			
+		}
+	});
+	DWREngine.setAsync(true);
+}
+refreshAffiche();
+setInterval(refreshAffiche, 5*60*1000);
+
+var myscroll=new Scroll("myscroll",24);
+	//统计现线人数
+	function onlineCounterInfo(){
+		onlineCounter.getOnline(function(count){
+			var onlineCounterDiv = document.getElementById('onlineCounterDiv');
+			onlineCounterDiv.innerHTML = "在线人数:<font color='#0000CC'>"+count+"</font>";		
+		});
+	}
+	onlineCounterInfo();
+	setInterval(onlineCounterInfo, 1000*60);
+	
+	/**
+	 * 禁用F5键
+	 * 屏蔽 Ctrl+n
+	 */       
+	function eventFun(event){  
+	      if((event.keyCode==116)||//禁用F5键
+	      	 (event.ctrlKey && event.keyCode==82)||//屏蔽Ctrl + R
+	      	 (event.ctrlKey && event.keyCode==78)||//屏蔽 Ctrl+n
+	      	 (event.keyCode==8)||//屏蔽退格删除键
+	      	 (event.keyCode==122)||//屏蔽F11
+	      	 (event.shiftKey && event.keyCode==121)//屏蔽 shift+F10
+	      	 ){       
+	          event.keyCode   =   0;       
+	          event.cancelBubble   =   true;       
+	          return   false;       
+	      }
+	}
+</script>
+</body>
+</html>

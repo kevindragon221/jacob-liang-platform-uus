@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemConfig>
+	<!-- 系统操作日志级别 0:为关闭;1:为增、删、改;2:为删、改、其它一些逻辑操作;3:为删 -->
+	<loggerLevel>1</loggerLevel>
+	<!-- 日志保存天数 -->
+	<logRecordKeepDays>30</logRecordKeepDays>
+	<!-- 系统管理员列表 -->
+	<systemMgr>
+		<userCode>admin</userCode>
+	</systemMgr>
+	<!-- 系统名称 -->
+	<systemName>jacob_liang平台管理统一用户</systemName>
+	<!-- 系统集群 true 为集群环境 false为非集群环境-->
+	<cluster>false</cluster>
+	<!-- 默认行权限级别-->
+	<rowPrivilegeLevel>org</rowPrivilegeLevel>
+	<JMX>
+		<tomcat default="true">
+			<!-- 集群环境下JMX URL -->
+			<jmxURL><![CDATA[service:jmx:rmi:///jndi/rmi://localhost:9999/jmxrmi]]></jmxURL>
+			<!-- 服务管理对象名 -->
+			<objectName><![CDATA[Catalina:type=Manager,context=/bhtsys,host=localhost]]></objectName>
+		</tomcat>
+		
+		<websphere default="false">
+		</websphere>
+		<weblogic default="false">
+		</weblogic>
+	</JMX>
+	
+</systemConfig>

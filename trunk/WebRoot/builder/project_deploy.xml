@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="bhtsys" default="compress-js" basedir=".">
+	<!--war包名称-->
+	<property name="war_name" value="bhtsys.war"/>
+	<!--工程名称-->
+	<property name="bhtsys.project.dir" value="D:/myworkspace/bhtsys" />
+	<!--发布工程名称-->
+	<property name="bhtsys.deploy.dir" value="D:/myworkspace/bhtsys_deploy" />
+	
+	<tstamp>
+		<format property="today" pattern="yyyy-MM-dd" locale="zh"/>
+	</tstamp>
+	
+	<!-- yuicompressor.jar的引用，使用最新的版本2.4.4 -->
+	<property name="yuicompressor" value="../WEB-INF/lib/yuicompressor-2.4.4.jar" />
+
+	<target name="bhtsysWar">
+		<delete file="${bhtsys.deploy.dir}/${war_name}"/>
+		<war warfile="${bhtsys.deploy.dir}/${war_name}"
+			webxml="${bhtsys.deploy.dir}/WEB-INF/web.xml">
+			<fileset dir="${bhtsys.deploy.dir}/WebRoot">
+			</fileset>
+		</war>
+	</target>
+
+	<!-- 压缩开发js文件 -->
+	<target name="compress-js"  depends="compress-css">
+		<!--Ext CSS样式目录-->
+		<property name="self-js" value="js" />
+		<property name="ext-js" value="ext/ux" />
+		<!-- 使用java命令调用yuicompressor.jar，就是用java命令执行yuicomprossor.jar -->
+		<!-- parallel="false"：对fileset中的每个文件都执行一次executable参数的命令 -->
+		<!-- dest="${js.ext}"：命令执行目录 -->
+		<apply executable="java" parallel="false" verbose="true" dest="${bhtsys.deploy.dir}/WebRoot/${self-js}">
+			<!-- 要压缩的css文件 -->
+			<fileset dir="../${self-js}">
+				<include name="**" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${yuicompressor}" />
+			<arg value="-o" />
+			<targetfile />
+			<!-- 每执行一次命令的输出文件为*-m.css，比如要压缩文件为tabs.css，则生成的压缩文件为tabs-m.css -->
+			<mapper type="glob" from="*.js" to="*.js" />
+		</apply>
+		
+		<apply executable="java" parallel="false" verbose="true" dest="${bhtsys.deploy.dir}/WebRoot/${ext-js}">
+			<!-- 要压缩的css文件 -->
+			<fileset dir="../${ext-js}">
+				<include name="**/*.js" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${yuicompressor}" />
+			<arg value="-o" />
+			<targetfile />
+			<!-- 每执行一次命令的输出文件为*-m.css，比如要压缩文件为tabs.css，则生成的压缩文件为tabs-m.css -->
+			<mapper type="glob" from="*.js" to="*.js" />
+		</apply>
+	</target>
+
+
+	<!-- 压缩并连结用到的ext的css文件 -->
+	<target name="compress-css" depends="deleteCompressFiles">
+		<!--Ext CSS样式目录-->
+		<property name="css.ext" value="ext/resources/css" />
+		<property name="css.self" value="ext/ux/css" />
+		<!-- 使用java命令调用yuicompressor.jar，就是用java命令执行yuicomprossor.jar -->
+		<!-- parallel="false"：对fileset中的每个文件都执行一次executable参数的命令 -->
+		<!-- dest="${css.ext}"：命令执行目录 -->
+		<apply executable="java" parallel="false" verbose="true" dest="${bhtsys.deploy.dir}/WebRoot/${css.ext}">
+			<!-- 要压缩的css文件 -->
+			<fileset dir="../${css.ext}">
+				<include name="*.css" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${yuicompressor}" />
+			<arg value="-o" />
+			<targetfile />
+			<!-- 每执行一次命令的输出文件为*-m.css，比如要压缩文件为tabs.css，则生成的压缩文件为tabs-m.css -->
+			<mapper type="glob" from="*.css" to="*.css" />
+		</apply>
+		
+		<apply executable="java" parallel="false" verbose="true" dest="${bhtsys.deploy.dir}/WebRoot/${css.self}">
+			<!-- 要压缩的css文件 -->
+			<fileset dir="../${css.self}">
+				<include name="*.css" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${yuicompressor}" />
+			<arg value="-o" />
+			<targetfile />
+			<!-- 每执行一次命令的输出文件为*-m.css，比如要压缩文件为tabs.css，则生成的压缩文件为tabs-m.css -->
+			<mapper type="glob" from="*.css" to="*.css" />
+		</apply>
+		<!-- concat destfile="${css.ext}/self-temp.css" encoding="UTF-8" fixlastline="true">
+			<fileset dir="${css.ext}">
+				<include name="datetime.css" />
+				<include name="multiSelect.css" />
+				<include name="Portal.css" />
+				<include name="Spinner.css" />
+				<include name="ext-patch.css" />
+			</fileset>
+		</concat -->
+	</target>
+
+	<target name="deleteCompressFiles"  depends="copyProjectFiles">
+		<!-- 删除之前生成的已压缩文件 -->
+		<delete>
+			<fileset dir="${bhtsys.deploy.dir}">
+				<include name="WebRoot/ext/ux/**/*.js"/>
+				<include name="WebRoot/js/**/*.js" />
+				<include name="WebRoot/ext/resources/css/*.*"/>
+				<include name="WebRoot/ext/ux/css/*.css"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="copyProjectFiles">
+		<copy todir="${bhtsys.deploy.dir}">
+			<fileset dir="${bhtsys.project.dir}">
+				<include name="**" />
+			</fileset>
+		</copy>
+	</target>
+</project>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module> 
+  <dynamicLoadJs>
+	<listView>
+		<jsUrl>./js/com/bhtec/view/business/platform/code/CodeList.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.platform.code.CodeList</jsMainClassName>
+	</listView>
+	<opView>
+		<jsUrl>./js/com/bhtec/view/business/platform/code/CodeVOp.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.platform.code.CodeVOp</jsMainClassName>
+	</opView>
+  </dynamicLoadJs>
+  <fieldNames> 
+    <field name="codeEngName">英文编码名称</field>  
+    <field name="codeName">中文编码名称</field>  
+    <field name="moduleName">模块名称</field> 
+    <field name="delimite">分隔符</field>
+    <field name="partNum">段数</field>
+    <field name="part">段格式</field>
+    <field name="partCon">段格式内容</field>
+    <field name="codeEffect">编码效果</field>
+    <field name="status">编码状态</field>
+	<field name="memo">编码备注</field>
+	<field name="creator">创建者</field>
+	<field name="createDate">创建日期</field>
+  </fieldNames>  
+</module>

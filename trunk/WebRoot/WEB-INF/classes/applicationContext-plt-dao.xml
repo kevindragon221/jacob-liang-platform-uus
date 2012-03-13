@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+	<!-- 模块DAO -->
+	<bean id="moduleDao" class="com.bhtec.dao.impl.platform.module.ModuleDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 操作DAO -->
+	<bean id="moduleOptDao" class="com.bhtec.dao.impl.platform.moduleopt.ModuleOptDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 日志DAO -->
+	<bean id="sysPlLoggerDao" class="com.bhtec.dao.impl.platform.logger.SysPlLoggerDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 常用功能DAO -->
+	<bean id="userCommFunDao" class="com.bhtec.dao.impl.commonused.usercommfun.UserCommFunDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 公告DAO -->
+	<bean id="afficheDao" class="com.bhtec.dao.impl.platform.affiche.AfficheDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 附件DAO -->
+	<bean id="accessoryDao" class="com.bhtec.dao.impl.platform.accessory.AccessoryDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 附件DAO -->
+	<bean id="systemParameterDao" class="com.bhtec.dao.impl.platform.systemparameter.SystemParameterDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 附件DAO -->
+	<bean id="typeDictionaryDao" class="com.bhtec.dao.impl.platform.typedictionary.TypeDictionaryDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 地区DAO -->
+	<bean id="districtDao" class="com.bhtec.dao.impl.platform.district.DistrictDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 编码DAO -->
+	<bean id="codeDao" class="com.bhtec.dao.impl.platform.code.CodeDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	<!-- 调度DAO -->
+	<bean id="schedulerDao" class="com.bhtec.dao.impl.platform.scheduler.SchedulerDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+</beans>

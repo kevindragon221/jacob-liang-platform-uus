@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/uum/organ/OrganList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.organ.OrganList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/uum/organ/OrganVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.organ.OrganVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="orgSimpleName">机构简称</field>
+		<field name="orgFullName">机构全称</field>
+		<field name="orgCode">机构代码</field>
+		<field name="orgAddress1">联系地址1</field>
+		<field name="orgAddress2">联系地址2</field>
+		<field name="orgTel1">联系电话1</field>
+		<field name="orgTel2">联系电话2</field>
+		<field name="orgBeginDate">成立日期</field>
+		<field name="orgType">机构类型</field>
+		<field name="orgPostal">机构邮编</field>
+		<field name="orgLegal">法人代表</field>
+		<field name="orgTaxNo">税务号</field>
+		<field name="orgRegNo">注册登记号</field>
+		<field name="orgBelongDist">所属地区</field>
+		<field name="status">机构状态</field>
+		<field name="memo">备注</field>
+		<field name="creator">创建人</field>
+		<field name="createDate">创建日期</field>
+		<field name="upOrgId">上级机构</field>
+	</fieldNames>
+</module>

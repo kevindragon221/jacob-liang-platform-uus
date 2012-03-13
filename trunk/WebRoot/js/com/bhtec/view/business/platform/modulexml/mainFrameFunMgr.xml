@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module> 
+  <dynamicLoadJs>
+	<listView>
+		<jsUrl>./js/com/bhtec/view/business/platform/mainframefun/MainFrameFunList.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.platform.mainframefun.MainFrameFunList</jsMainClassName>
+	</listView>
+	<opView>
+		<jsUrl>./js/com/bhtec/view/business/platform/mainframefun/MainFrameFunVOp.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.platform.mainframefun.MainFrameFunVOp</jsMainClassName>
+	</opView>
+  </dynamicLoadJs>
+  <fieldNames> 
+    <field name="funName">功能区名称</field>  
+    <field name="funURI">资源URI</field>  
+    <field name="funURIDesc">资源URI描述</field>  
+    <field name="funMemo">功能区备注</field> 
+  </fieldNames>  
+  <funArea> 
+    <area> 
+      <funId>30</funId>  
+      <funName>header</funName>  
+      <funURI>winxp</funURI>  
+      <funURIDesc>页头图片流动方式</funURIDesc>  
+      <funMemo>页头图片流动方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>31</funId>  
+      <funName>navigate</funName>  
+      <funURI>winxp</funURI>  
+      <funURIDesc>导航下拉菜单方式</funURIDesc>  
+      <funMemo>导航下拉菜单方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>32</funId>  
+      <funName>outlookBar</funName>  
+      <funURI>winxp</funURI>  
+      <funURIDesc>左侧菜单文件夹方式</funURIDesc>  
+      <funMemo>左侧菜单文件夹方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>33</funId>  
+      <funName>stateBar</funName>  
+      <funURI>winxp</funURI>  
+      <funURIDesc>状态栏公告上下流动方式</funURIDesc>  
+      <funMemo>状态栏公告上下流动方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>34</funId>  
+      <funName>mainPage</funName>  
+      <funURI>winxp</funURI>  
+      <funURIDesc>主页门户风格</funURIDesc>  
+      <funMemo>主页门户风格</funMemo> 
+    </area>  
+    <area> 
+      <funId>35</funId>  
+      <funName>stateBar</funName>  
+      <funURI>general</funURI>  
+      <funURIDesc>状态栏公告由右至左流动方式</funURIDesc>  
+      <funMemo>状态栏公告由右至左流动方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>36</funId>  
+      <funName>outlookBar</funName>  
+      <funURI>general</funURI>  
+      <funURIDesc>左侧菜单outlook方式</funURIDesc>  
+      <funMemo>左侧菜单outlook方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>37</funId>  
+      <funName>header</funName>  
+      <funURI>general</funURI>  
+      <funURIDesc>页头图片无流动方式</funURIDesc>  
+      <funMemo>页头图片无流动方式</funMemo> 
+    </area>  
+    <area> 
+      <funId>38</funId>  
+      <funName>navigate</funName>  
+      <funURI>general</funURI>  
+      <funURIDesc>导航无下拉菜单方式</funURIDesc>  
+      <funMemo>导航无下拉菜单方式</funMemo> 
+    </area>  
+    <area>
+      <funId>39</funId>
+      <funName>mainPage</funName>
+      <funURI>general</funURI>
+      <funURIDesc>主页自定义风格</funURIDesc>
+      <funMemo>主页自定义风格</funMemo>
+    </area>
+  </funArea> 
+</module>

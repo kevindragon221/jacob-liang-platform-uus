@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrlShare>./ext/ux/grid/RowExpander.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/uum/group/userGroup/UserGroupList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.group.userGroup.UserGroupList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrlShare>./ext/ux/multiselect/DDView.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/multiselect/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/uum/group/userGroup/UserGroupMember.js</jsUrl>
+			<jsUrl>./js/com/bhtec/view/business/uum/group/userGroup/UserGroupVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.group.userGroup.UserGroupVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="groupName">组名称</field>
+		<field name="status">组状态</field>
+		<field name="memo">组备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+		<field name="organ">机构</field>
+		<field name="role">角色</field>
+		<field name="userCode">用户号</field>
+		<field name="userName">用户名</field>
+		<field name="userGroupAdd">用户组成员添加</field>
+		<field name="userGroupInfoAdd">用户组信息添加</field>
+	</fieldNames>
+</module>

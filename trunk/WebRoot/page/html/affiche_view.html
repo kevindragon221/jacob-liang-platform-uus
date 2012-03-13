@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>公告查看</title>
+	
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<!-- ext相关开始 -->
+  	<link rel="stylesheet" type="text/css" href="../../ext/resources/css/ext-all.css">
+  	<script type="text/javascript" src="../../ext/adapter/ext/ext-base.js"></script>
+  	<script type="text/javascript" src="../../ext/ext-all.gzjs"></script>
+  	<script type="text/javascript" src="../../ext/ext-lang-zh_CN.js"></script>
+  	<!-- ext相关结束-->
+	
+  	<script>
+		  	//var userName = window.opener.form1.username.value;
+		  	function afficheView(moduleData){
+  				//公告标题
+				var afficheTitle = new Ext.form.Label({
+						fieldLabel : '公告标题',
+						html:moduleData.afficheTitle||''
+				});
+				
+				//公告内容
+				var afficheContent = {
+					xtype:'htmleditor',
+					name:'afficheContent',
+					value:moduleData.afficheContent||'',
+					fieldLabel : '公告内容',
+					width: 500,
+				    height: 200
+				}
+				var accessoryDiv = '';
+				var filePath = 'uploadFile/affiche/';
+				var accessoryList = moduleData.accessoryList;
+				for(i=0;i<accessoryList.length;i++){
+					var accessoryId = accessoryList[i].accessoryId;
+					var accessoryName = accessoryList[i].accessoryName;
+					var oldFileName = accessoryName;
+					var splitFlag = accessoryName.indexOf('_');
+					accessoryName = accessoryName.substr(splitFlag+1);
+					var suffixName = accessoryName.substr(accessoryName.lastIndexOf('.')+1);
+					var imgPictureUrl = '../img/button/withoutformat.png';
+					if(suffixName == 'docx' 
+						|| suffixName == 'doc'){
+							imgPictureUrl = '../img/button/word.png';
+					}else if(suffixName == 'pdf'){
+							imgPictureUrl = '../img/button/pdf.png';
+					}else if(suffixName == 'pptx' 
+						|| suffixName == 'ppt'){
+							imgPictureUrl = '../img/button/powerpoint.png';
+					}else if(suffixName == 'xlsx' 
+						|| suffixName == 'xls'){
+							imgPictureUrl = '../img/button/excel.png';
+					}
+					var url = "accessoryActionDef!downloadFile.action?accessoryPath="+filePath+"&accessoryId="+accessoryId;
+					var newAccessory =	
+								    "&nbsp;&nbsp;" +
+								    "<a href="+url+"><img src='"+imgPictureUrl+"'/>" +accessoryName+"</a>";
+					accessoryDiv += "<div id='"+accessoryId+"' style='display:inline;float:center;'>"+newAccessory+"</div>";
+				}
+				//已上传的附件列表
+				var accessoryList = {
+					xtype:'panel',
+					layout:'form',
+					border:false,
+					items:[{
+							xtype:'label',
+							html:"附件列表: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+							+"<div id='accessoryListId' style='display:inline;float:center;'>"
+							+accessoryDiv
+							+"</div>"
+						}]
+				}
+				var fieldSet = {
+						xtype	  : 'fieldset',	
+						title	  : '系统公告查看',
+						layout 	  : 'column',
+						autoHeight:true,
+						autoWidth:true,
+						frame:false,
+						bodyStyle : 'padding-left:20px;padding-top:10px;',
+						items 	  : [{
+										border : false,
+										layout : "form",
+										columnWidth : 1,
+										items : [afficheTitle,{border:false},
+											afficheContent,{border:false},accessoryList]
+									 }
+								]
+				}; 
+				var afficheForm = new Ext.form.FormPanel({
+					layout:'form',
+					frame:false,
+					bodyStyle : 'padding:10px;',
+					items:fieldSet
+				});
+				var afficheWin = new Ext.Window({
+						width: Ext.getBody().getWidth(),
+						height : Ext.getBody().getHeight(),
+						layout:'fit',
+						modal : true,
+						closable : false,
+						resizable : false,
+						items:afficheForm,
+						buttonAlign:'center',
+						buttons:[{
+							text:'关闭',
+							handler:function(){
+								window.close();
+							}
+						}]
+				});
+				afficheWin.show();
+  			}
+		  	//动态引入CSS
+			Ext.onReady(function(){
+				Ext.QuickTips.init();
+				Ext.form.Field.prototype.msgTarget = 'side';
+				Ext.BLANK_IMAGE_URL = './ext/resources/images/default/s.gif';
+				var urlInfo=window.location.href;               //获取当前页面的url
+	            var offset=urlInfo.indexOf("=");                   //设置参数字符串开始的位置
+	            var strParamValue=urlInfo.substr(offset+1); //取出参数字符串 这里会获得类似“id=1”这样的字符串
+	            Ext.Ajax.request({
+					url:'afficheAction!findAfficheByAfficheId.action',
+					params:{
+						modViewRecId:strParamValue
+					},
+					success:function(response, options) {
+						var moduleData = Ext.util.JSON.decode(response.responseText);
+						afficheView(moduleData.model);
+					}
+				});
+			});
+			
+	</script>
+  </head>
+  
+  <body style="background-image:url(../img/bht.png)">
+  </body>
+</html>

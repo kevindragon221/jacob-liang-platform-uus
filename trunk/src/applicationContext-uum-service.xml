@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- 统一用户公共service -->
+	<bean id="uumCommonService" class="com.bhtec.service.impl.uum.UumCommonServiceImpl"
+		parent="baseService">
+		<property name="userService"><ref bean="userService"/></property>
+		<property name="roleUserService"><ref bean="roleUserService"/></property>
+		<property name="privilegeService"><ref bean="privilegeService"/></property>		
+		<property name="userCommFunService"><ref bean="userCommFunService"/></property>
+		<property name="userAgentService"><ref bean="userAgentService"/></property>
+	</bean>
+	
+	<!-- 机构sevice -->
+	<bean id="organService" class="com.bhtec.service.impl.uum.organ.OrganServiceImpl"
+		parent="baseService">
+		<property name="organDao"><ref bean="organDao"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+		<property name="platformCommonService" ref="platformCommonService"></property>
+		<property name="privilegeService"><ref bean="privilegeService"/></property>
+	</bean>
+	
+	<!-- 角色sevice -->
+	<bean id="roleService" class="com.bhtec.service.impl.uum.role.RoleServiceImpl"
+		parent="baseService">
+		<property name="roleDao"><ref bean="roleDao"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+		<property name="privilegeService"><ref bean="privilegeService"/></property>	
+	</bean>
+	
+	<!-- 角色分配sevice -->
+	<bean id="roleOrganService" class="com.bhtec.service.impl.uum.role.RoleOrganServiceImpl"
+		parent="baseService">
+		<property name="roleDao"><ref bean="roleDao"/></property>
+		<property name="roleOrganDao"><ref bean="roleOrganDao"/></property>
+		<property name="roleUserService"><ref bean="roleUserService"/></property>		
+	</bean>
+	
+	<!-- 用户sevice -->
+	<bean id="userService" class="com.bhtec.service.impl.uum.user.UserServiceImpl"
+		parent="baseService">
+		<property name="userDao"><ref bean="userDao"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+		<property name="organService"><ref bean="organService"/></property>
+		<property name="roleUserService"><ref bean="roleUserService"/></property>
+		<property name="privilegeService"><ref bean="privilegeService"/></property>
+		<property name="userAgentService"><ref bean="userAgentService"/></property>
+		<property name="userCommFunService"><ref bean="userCommFunService"/></property>
+	</bean>
+	
+	<!-- 用户代理sevice -->
+	<bean id="userAgentService" class="com.bhtec.service.impl.uum.user.UserAgentServiceImpl"
+		parent="baseService">
+		<property name="userAgentDao"><ref bean="userAgentDao"/></property>
+		<property name="userService"><ref bean="userService"/></property>
+		<property name="platformCommonService"><ref bean="platformCommonService"/></property>
+		<property name="privilegeService"><ref bean="privilegeService"/></property>
+		<property name="roleUserService"><ref bean="roleUserService"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+	</bean>
+	
+	<!-- 用户角色sevice -->
+	<bean id="roleUserService" class="com.bhtec.service.impl.uum.role.RoleUserServiceImpl"
+		parent="baseService">
+		<property name="roleUserDao"><ref bean="roleUserDao"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+		<property name="userService"><ref bean="userService"/></property>
+	</bean>
+	
+	<!-- 权限sevice -->
+	<bean id="privilegeService" class="com.bhtec.service.impl.uum.privilege.PrivilegeServiceImpl"
+		parent="baseService">
+		<property name="privilegeDao"><ref bean="privilegeDao"/></property>
+		<property name="platformCommonService"><ref bean="platformCommonService"/></property>
+		<property name="userService"><ref bean="userService"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+		<property name="organService"><ref bean="organService"/></property>
+		<property name="userAgentService"><ref bean="userAgentService"/></property>
+	</bean>
+	
+	<!-- 用户组sevice -->
+	<bean id="userGroupService" class="com.bhtec.service.impl.uum.group.usergroup.UserGroupServiceImpl"
+		parent="baseService">
+		<property name="userGroupDao"><ref bean="userGroupDao"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+		<property name="userService"><ref bean="userService"/></property>
+	</bean>
+	
+	<!-- 角色组sevice -->
+	<bean id="roleGroupService" class="com.bhtec.service.impl.uum.group.rolegroup.RoleGroupServiceImpl"
+		parent="baseService">
+		<property name="roleGroupDao"><ref bean="roleGroupDao"/></property>
+		<property name="roleOrganService"><ref bean="roleOrganService"/></property>
+	</bean>
+	<!-- 普通组sevice -->
+	<bean id="generalGroupService" class="com.bhtec.service.impl.uum.group.generalgroup.GeneralGroupServiceImpl"
+		parent="baseService">
+		<property name="userGroupDao"><ref bean="userGroupDao"/></property>
+		<property name="roleGroupService"><ref bean="roleGroupService"/></property>
+		<property name="userGroupService"><ref bean="userGroupService"/></property>
+	</bean>
+	
+</beans>

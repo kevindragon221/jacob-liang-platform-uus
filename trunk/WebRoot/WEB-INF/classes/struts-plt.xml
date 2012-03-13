@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	 
+	<package name="plt_json" extends="json-default">
+		<!-- session拦截器 -->
+		<interceptors>  
+		     <interceptor name="sessionInterceptor" class="com.bhtec.common.interceptor.SessionInterceptor" />  
+		     <interceptor-stack name="defaultIntegerceptor">  
+		           <interceptor-ref name="sessionInterceptor" />    
+		           <interceptor-ref name="defaultStack" />  
+		     </interceptor-stack>  
+		</interceptors>  
+		
+		<default-interceptor-ref name="defaultIntegerceptor" />
+		<!-- 全局结果集 -->
+		<global-results>
+			<result name="login">/login.html</result>
+		</global-results>
+		<action name="baseInfoAction" class="baseInfoAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="mainFrameFunAction" class="mainFrameFunAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="userPageLayoutAction" class="userPageLayoutAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="userCommFunAction" class="userCommFunAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="moduleAction" class="moduleAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="moduleOptAction" class="moduleOptAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="systemConfigAction" class="systemConfigAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="afficheAction" class="afficheAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="accessoryAction" class="accessoryAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="systemParameterAction" class="systemParameterAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="typeDictionaryAction" class="typeDictionaryAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="districtAction" class="districtAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="codeAction" class="codeAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="loggerAction" class="loggerAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="schedulerAction" class="schedulerAction">
+			<result name="success"  type="json"/>
+		 </action>
+	</package>
+	
+	<package name="login" extends="json-default">
+		 <action name="loginAction" class="loginAction">
+			<result name="success"  type="json"/>
+			<result name="error"  type="json"/>
+		 </action>
+	</package>
+	
+	<package name="loginForword" extends="struts-default">
+		 <action name="loginActionForword" class="loginAction">
+			<result name="success">/page/html/mainpage.html</result>
+			<result name="error"></result>
+		 </action>
+		 <action name="accessoryActionDef" class="accessoryAction">
+			<result name="success"/>
+		 </action>
+	</package>
+</struts>

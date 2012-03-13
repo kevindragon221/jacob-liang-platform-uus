@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module> 
+  <dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/platform/affiche/AfficheList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.affiche.AfficheList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrlShare>./js/com/bhtec/view/util/Accessory.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/platform/affiche/AfficheVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.affiche.AfficheVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>  
+  <fieldNames> 
+    <field name="afficheTitle">公告标题</field>  
+    <field name="afficheInvalidate">有效日期</field>  
+    <field name="affichePulish">是否发布</field> 
+    <field name="afficheContent">公告正文</field>
+    <field name="afficheAccessory">公告附件</field>
+  </fieldNames>  
+</module>

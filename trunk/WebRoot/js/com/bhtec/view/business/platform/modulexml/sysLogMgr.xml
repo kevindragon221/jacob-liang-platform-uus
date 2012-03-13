@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/platform/logger/LoggerList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.logger.LoggerList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/platform/logger/LoggerVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.logger.LoggerVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="optModName">操作模块名</field>
+		<field name="optName">操作名</field>
+		<field name="optBusinessId">业务数据ID</field>
+		<field name="optPcName">计算机名称</field>
+		<field name="optPcIp">计算机IP</field>
+		<field name="optUserName">操作人姓名</field>
+		<field name="optUserRole">操作人角色</field>
+		<field name="optUserOgan">操作人机构</field>
+		<field name="optTime">操作时间</field>
+		<field name="startTime">开始时间</field>
+		<field name="endTime">结束时间</field>
+		<field name="optContent">操作内容</field>
+	</fieldNames>
+</module>

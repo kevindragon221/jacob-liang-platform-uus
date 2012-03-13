@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-2.5.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+	default-autowire="byName">
+	
+	<bean id="baseDao" class="com.bhtec.dao.impl.BaseDaoHibImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="baseService" class="com.bhtec.service.impl.BaseServiceImpl">
+		<property name="baseDao"><ref bean="baseDao" /></property>		
+		<property name="sysPlLoggerService"><ref bean="sysPlLoggerService" /></property>
+	</bean>
+	
+	<bean id="springContextUtil" class="com.bhtec.common.tools.SpringContextUtil" /> 
+	<!-- Hibernate SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.proxool.pool_alias">proxooldatascr</prop>
+			    <prop key="hibernate.proxool.xml">proxool.xml</prop>
+			    <prop key="hibernate.connection.provider_class">
+			    	org.hibernate.connection.ProxoolConnectionProvider
+			    </prop>
+			    <!-- 数据库方言 -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<!--prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop-->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="current_session_context_class">thread</prop>
+				<prop key="hibernate.default_schema">bhtec</prop><!-- 模式名 -->
+				<prop key="hibernate.jdbc.batch_size">30</prop><!-- 批量操作 -->
+				<prop key="hibernate.cache.use_second_level_cache">true</prop><!-- 二级缓存 -->
+				<prop key="hibernate.cache.provider_class">
+					com.opensymphony.oscache.hibernate.OSCacheProvider
+                </prop>
+                <prop key="generate_statistics">true</prop>
+			</props>
+		</property>
+
+		<!--property name="mappingJarLocations">
+			<list>
+				<value>WEB-INF/lib/bhtsys.jar</value>
+			</list>
+		</property-->
+
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/bhtec/domain/pojo/platform</value>
+				<value>classpath:com/bhtec/domain/pojo/uum</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 定义事务管理器（声明式的事务） -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- get/load/find开头的方法只读事务,其它为新事物 -->
+			<tx:method name="get*" propagation="SUPPORTS"
+				read-only="true" />
+			<tx:method name="load*" propagation="SUPPORTS"
+				read-only="true" />
+			<tx:method name="find*" propagation="SUPPORTS"
+				read-only="true" />
+			<tx:method name="*" propagation="REQUIRED"
+				rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config proxy-target-class="true">
+		<aop:pointcut id="interceptorPointCuts"
+			expression="execution(* com.bhtec.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="interceptorPointCuts" />
+	</aop:config>
+	<!-- 系统登录 -->
+	<bean id="loginService" class="com.bhtec.service.impl.login.LoginServiceImpl"
+		parent="baseService">
+		<property name="uumCommonService"><ref bean="uumCommonService"/></property>
+		<property name="platformCommonService"><ref bean="platformCommonService"/></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+	<script type="text/javascript" src="../../dwr/engine.js"></script>
+	<script type="text/javascript" src="../../dwr/util.js"></script>
+	<script type="text/javascript" src="../../dwr/interface/baseInfoAction.js"></script>
+</head>
+<style type="text/css">
+body {margin:0;padding:1;}
+.font12 {font-size: 12px;}
+.systitle {
+		font-family: "隶书";
+		font-size: 36px;
+		color: #FFFFFF;
+}
+</style>
+
+<body bgcolor="#1C3C78"  scroll="no"  onkeydown="eventFun(event)"><!-- 去掉滚动条 -->
+		<table width=100% height=100% border=0 align=center cellpadding=1 cellspacing=0>
+		  <tr>
+		    <td width=700 rowspan=2> 																								
+			  	                                                                                                                                                                                       
+						  <div id='imageScroll' style="overflow:hidden;height:90px;width:750px;color:#ff0000">
+							  <table align=left cellpadding=0 cellspace=0 border=0 >
+								  <tr>
+									  <td id='imageScroll1' valign='top'>
+										  <table border=0 cellpadding=0 cellspacing=0 valign='top'>
+										  <div>
+											  <tr> 
+											  <td><a href="" target=_blank><img border=0 src=../../img/business/bht.png width=160 height=80 hspace=7></a><br><center><font size="1px">说明一</font></center></td>
+											  <td width=30></td>
+											  <td><a href="" target=_blank><img border=0 src=../../img/business/BS9092.jpg width=160 height=80  hspace=7></a><br><center><font size="1px">说明二</font></center></td></td>
+											  <td width=30></td>
+											  <td><a href="" target=_blank><img border=0 src=../../img/business/BS9084.jpg width=160 height=80  hspace=7></a><br><center><font size="1px">说明三</font></center></td>
+											  <td><a href="" target=_blank><img border=0 src=../../img/business/BS9079.jpg width=160 height=80  hspace=7></a><br><center><font size="1px">说明四</font></center></td>
+											  <td width=30></td>
+											  <td><a href="" target=_blank><img border=0 src=../../img/business/BS9070.jpg width=160 height=80  hspace=7></a><br><center><font size="1px">说明五</font></center></td>
+											  </tr>
+										  </div>
+										  </table>
+									 </td>
+									 <td id='imageScroll2' valign='top'></td>
+								 </tr>
+							 </table>
+						 </div>  
+					 
+		    </td>
+		    <td  colspan=2 class='systitle'>
+		    	<div id="sysTitle"></div>
+			 </td>
+		  </tr>
+		  <tr>
+		  <td width=550 height="50"> 
+		   <div class='font12'>
+			    <div style=display:inline;float:right; id='welcome'/> 			    	
+			    </div> 
+			    <div style=display:inline;float:left; id='jstimer'/> 
+			    </div>
+		    </div> 
+		    </td>
+		  </tr>
+		</table>
+<script>
+  //图片流动
+  var speed=30//速度数值越大速度越慢
+  imageScroll2.innerHTML=imageScroll1.innerHTML
+  function Marquee(){
+	  if(imageScroll2.offsetWidth-imageScroll.scrollLeft<=0){
+	  		imageScroll.scrollLeft -= imageScroll1.offsetWidth;
+	  }else{
+	  		imageScroll.scrollLeft++;
+	  }
+  }
+  var MyMar=setInterval(Marquee,speed)
+  imageScroll.onmouseover=function() {clearInterval(MyMar)}
+  imageScroll.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+  baseInfoAction.getUserRoleOrgan(function(welcomeInfo){
+		//欢迎信息
+		var welcome = document.getElementById('welcome');
+  		welcome.innerHTML = "<center><font color='white'>欢迎您："+welcomeInfo+"</font></center>";
+	});
+
+  //系统名称
+  baseInfoAction.getSystemName(function(systemName){
+  		var sysTitle = document.getElementById('sysTitle');
+  		sysTitle.innerHTML = "<center>"+systemName+"</center>";		
+  });
+  
+  //时钟
+  	var jstimerFun = function(){
+  		var d, x, minus, second, s = "";
+		x = new Array("星期日", "星期一", "星期二");
+		x = x.concat("星期三", "星期四", "星期五");
+		x = x.concat("星期六");
+		d = new Date();
+		s += d.getFullYear() + "年";
+		s += (d.getMonth() + 1) + "月";
+		s += d.getDate() + "日    ";
+		s += x[d.getDay()] + "  ";
+		s += d.getHours() + ":";
+		minus = d.getMinutes();
+		second = d.getSeconds();
+		if (minus < 10) {
+			minus = "0" + minus;
+		}
+		if (second < 10) {
+			second = "0" + second;
+		}
+		s += minus + ":" + second;
+		var jstimer = document.getElementById('jstimer');
+  		jstimer.innerHTML='<font color=white> 现在是：'+ s+'</font>';
+  	}
+	setInterval(jstimerFun, 1000);
+	/**
+	 * 禁用F5键
+	 * 屏蔽 Ctrl+n
+	 */       
+	function eventFun(event){  
+	      if((event.keyCode==116)||//禁用F5键
+	      	 (event.ctrlKey && event.keyCode==82)||//屏蔽Ctrl + R
+	      	 (event.ctrlKey && event.keyCode==78)||//屏蔽 Ctrl+n
+	      	 (event.keyCode==8)||//屏蔽退格删除键
+	      	 (event.keyCode==122)||//屏蔽F11
+	      	 (event.shiftKey && event.keyCode==121)//屏蔽 shift+F10
+	      	 ){       
+	          event.keyCode   =   0;       
+	          event.cancelBubble   =   true;       
+	          return   false;       
+	      }
+	}
+  </script>
+</body>
+</html>

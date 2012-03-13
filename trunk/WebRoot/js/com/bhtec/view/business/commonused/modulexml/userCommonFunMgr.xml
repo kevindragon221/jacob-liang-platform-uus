@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrlShare>./ext/ux/multiselect/DDView.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/multiselect/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/commonused/commonfuntion/UserCommonFunction.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.commonused.commonfuntion.UserCommonFunction</jsMainClassName>
+		</listView>
+	</dynamicLoadJs>
+</module>

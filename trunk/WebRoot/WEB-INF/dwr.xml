@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>	
+	<allow>
+		<convert converter="bean" match="com.bhtec.domain.pojo.platform.SysplAffiche"/>
+	    <create creator="script" javascript="onlineCounter">
+	      <param name="language" value="beanshell"/>
+	      <param name="script">
+	        import com.bhtec.common.listener.OnlineCounter;
+	        return OnlineCounter.getInstance();
+	      </param>
+	    </create>
+	   
+	    <create creator="new" javascript="sessionManger">
+			<param name="class" value="com.bhtec.common.util.SessionManger" />
+		</create>
+		
+		<create creator="new" javascript="baseInfoAction">
+			<param name="class" value="com.bhtec.action.commonused.BaseInfoAction" />
+		</create>
+		
+    	<create creator="spring" javascript="platformCommonService">
+      		<param name="beanName" value="platformCommonService"/>	
+      		<include method="obtainSysplCodeByCodeEngName"/> 
+    	</create>
+	</allow>
+</dwr>

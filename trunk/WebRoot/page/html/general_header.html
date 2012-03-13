@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+</title>
+	<script type="text/javascript" src="../../dwr/engine.js"></script>
+	<script type="text/javascript" src="../../dwr/util.js"></script>
+	<script type="text/javascript" src="../../dwr/interface/baseInfoAction.js"></script>
+</head>
+<style type="text/css">
+.font12 {font-size: 12px;}
+.systitle {
+		font-family: "隶书";
+		font-size: 36px;
+		color: #FFFFFF;
+}
+</style>
+<body bgcolor="#1C3C78"  scroll="no" onkeydown="eventFun(event)"><!-- 去掉滚动条 -->
+		<div id='header'>
+			<div>
+				<table width='100%' height='20%' border='0' align='center' cellpadding='1' cellspacing='0' bgcolor=''>
+				  <tr>
+				    <td width='645' rowspan='2' class='systitle'> 
+					  	 <div id="sysTitle"></div>
+				    </td>
+				    <td height='33' colspan='2'></td>
+				  </tr>
+				  <tr>
+				   <td width='480' height='20'> 
+				   <div class='font12'>
+					    <div style='display:inline;float:right;' id='welcome'/> 
+					    </div> 
+					    <div style='display:inline;float:left;' id='jstimer'/> 
+					    </div>
+				    </div> 
+				    </td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+</body>
+</html>
+<script>
+   baseInfoAction.getUserRoleOrgan(function(welcomeInfo){
+		//欢迎信息
+		var welcome = document.getElementById('welcome');
+  		welcome.innerHTML = "<center><font color='white'>欢迎您："+welcomeInfo+"</font></center>";
+	});
+
+  //系统名称
+  baseInfoAction.getSystemName(function(systemName){
+  		var sysTitle = document.getElementById('sysTitle');
+  		sysTitle.innerHTML = "<center>"+systemName+"</center>";		
+  });
+  
+  //时钟
+  	var jstimerFun = function(){
+  		var d, x, minus, second, s = "";
+		x = new Array("星期日", "星期一", "星期二");
+		x = x.concat("星期三", "星期四", "星期五");
+		x = x.concat("星期六");
+		d = new Date();
+		s += d.getFullYear() + "年";
+		s += (d.getMonth() + 1) + "月";
+		s += d.getDate() + "日    ";
+		s += x[d.getDay()] + "  ";
+		s += d.getHours() + ":";
+		minus = d.getMinutes();
+		second = d.getSeconds();
+		if (minus < 10) {
+			minus = "0" + minus;
+		}
+		if (second < 10) {
+			second = "0" + second;
+		}
+		s += minus + ":" + second;
+		var jstimer = document.getElementById('jstimer');
+  		jstimer.innerHTML='<font color=white> 现在是：'+ s+'</font>';
+  	}
+	setInterval(jstimerFun, 1000);
+	/**
+	 * 禁用F5键
+	 * 屏蔽 Ctrl+n
+	 */       
+	function eventFun(event){  
+	      if((event.keyCode==116)||//禁用F5键
+	      	 (event.ctrlKey && event.keyCode==82)||//屏蔽Ctrl + R
+	      	 (event.ctrlKey && event.keyCode==78)||//屏蔽 Ctrl+n
+	      	 (event.keyCode==8)||//屏蔽退格删除键
+	      	 (event.keyCode==122)||//屏蔽F11
+	      	 (event.shiftKey && event.keyCode==121)//屏蔽 shift+F10
+	      	 ){       
+	          event.keyCode   =   0;       
+	          event.cancelBubble   =   true;       
+	          return   false;       
+	      }
+	}
+	
+</script>

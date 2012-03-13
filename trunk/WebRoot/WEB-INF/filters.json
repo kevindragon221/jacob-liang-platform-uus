@@ -1,0 +1,27 @@
+[
+  { 
+    "channels": "/**",
+    "filter"  : "org.mortbay.cometd.filter.NoMarkupFilter",
+    "init"    : {}
+  },
+
+  { 
+    "channels": "/public/*",
+    "filter"   : "org.mortbay.cometd.filter.RegexFilter",
+    "init"    : [ 
+	              [ "[fF].ck","dang" ],
+	              [ "teh ","the "]
+	            ]
+  },
+  
+  { 
+    "channels": "/public/**",
+    "filter"   : "org.mortbay.cometd.filter.RegexFilter",
+    "init"    : [ 
+	              [ "[Mm]icrosoft", "Micro\\$oft" ],
+	              [ ".*tomcat.*", null ] 
+	            ]
+  }
+  
+  
+]

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs><!-- 动态加载js -->
+		<listView><!-- 列表页面 -->
+			<!-- js加载路径 -->
+			<jsUrlShare>./ext/ux/grid/RowExpander.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/uum/group/roleGroup/RoleGroupList.js</jsUrl>
+			<!-- 列表js类名 -->
+			<jsMainClassName>com.bhtec.view.business.uum.group.roleGroup.RoleGroupList</jsMainClassName>
+		</listView>
+		<opView><!-- 页面操作视图 jsUrlShare 全局共享-->
+			<jsUrlShare>./ext/ux/multiselect/DDView.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/multiselect/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/uum/group/roleGroup/RoleGroupMember.js</jsUrl>
+			<jsUrl>./js/com/bhtec/view/business/uum/group/roleGroup/RoleGroupVOp.js</jsUrl>
+			<!-- 操作页面js类名 -->
+			<jsMainClassName>com.bhtec.view.business.uum.group.roleGroup.RoleGroupVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="groupName">组名称</field>
+		<field name="status">组状态</field>
+		<field name="memo">组备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+		<field name="organ">机构</field>
+		<field name="roleName">角色名</field>
+		<field name="roleMemo">角色备注</field>
+		<field name="roleGroupInfoAdd">角色组信息添加</field>
+		<field name="roleGroupAdd">角色组成员添加</field>
+	</fieldNames>
+</module>

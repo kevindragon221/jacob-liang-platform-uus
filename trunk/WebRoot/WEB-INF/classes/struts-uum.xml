@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	 
+	<package name="uum_json" extends="plt_json">
+		 <action name="organAction" class="organAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="roleAction" class="roleAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="roleOrganAction" class="roleOrganAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="userAction" class="userAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="userAgentAction" class="userAgentAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="userGroupAction" class="userGroupAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="roleGroupAction" class="roleGroupAction">
+			<result name="success"  type="json"/>
+		 </action>
+		 <action name="generalGroupAction" class="generalGroupAction">
+			<result name="success"  type="json"/>
+		 </action>
+	</package>
+</struts>

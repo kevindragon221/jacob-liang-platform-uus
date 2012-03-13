@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>jacob_liang系统平台统一用</title>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<!-- ext相关开始 -->
+  	<link rel="stylesheet" type="text/css" href="./ext/resources/css/ext-all.css">
+  	<script type="text/javascript" src="./ext/adapter/ext/ext-base.js"></script>
+  	<script type="text/javascript" src="./ext/ext-all-debug.js"></script>
+  	<script type="text/javascript" src="./ext/ext-lang-zh_CN.js"></script>
+  	<script type="text/javascript" src="./ext/ux/grid/PageSize.js"></script>
+  	<!-- ext相关结束-->
+  	
+	<!-- 公共js开始 -->
+  	<script type="text/javascript" src="./js/com/bhtec/util/ExtCommonFun.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/util/JsCommonSelfFun.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/util/BasicConstant.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/util/Data.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/util/Cookie.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/view/ViewportFactory.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/view/util/CommonWidgets.js"></script> 
+  	<script type="text/javascript" src="./js/com/bhtec/view/util/List.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/control/MenuControl.js"></script>
+  	
+	<script type="text/javascript" src="./js/com/bhtec/view/util/sound/soundmanager2-min.js"></script>
+  	<script type="text/javascript" src="./js/com/bhtec/view/util/sound/Sound.js"></script>
+	<!-- 公共js结束 -->
+	
+  	<script>
+		  	//动态引入CSS
+		  	if(navigator.appName == "Microsoft Internet Explorer"){ 
+	           if(navigator.appVersion.match(/6./i)=='6.'){
+	                  document.write('<link rel="stylesheet" type="text/css" href="./ext/ux/css/bhtIE6.css">');
+	           }else{
+	                 document.write('<link rel="stylesheet" type="text/css" href="./ext/ux/css/bhtIE7.css">');
+	           }
+	    	}else{
+	    		document.write('<link rel="stylesheet" type="text/css" href="./ext/ux/css/bhtIE7.css">');
+	    	}	
+	    	//能过url取得登录用户code 全局变量
+	    	var strHref = document.location.href;
+	    	var multiRol = strHref.indexOf('=');
+	    	var a = strHref.indexOf('&');
+	    	var multiRoleFlag = strHref.substring(multiRol+1,a);//角色切换方式
+			var intPos = strHref.lastIndexOf('#');
+			var userCode_cookie = strHref.substr(intPos + 1);
+	    	//从cookie中获得用户自定义的页面布局
+			var bht_cookie = new com.bhtec.util.Cookie();
+			var bht_cookie_header = bht_cookie.getCookie(userCode_cookie+'_'+basicConstant.BHT_COOKIE_HEADER);
+			var bht_cookie_navigate = bht_cookie.getCookie(userCode_cookie+'_'+basicConstant.BHT_COOKIE_NAVIGATE);
+			var bht_cookie_outlook = bht_cookie.getCookie(userCode_cookie+'_'+basicConstant.BHT_COOKIE_OUTLOOK);
+			var bht_cookie_mainpage = bht_cookie.getCookie(userCode_cookie+'_'+basicConstant.BHT_COOKIE_MAINPAGE);
+			var bht_cookie_statebar = bht_cookie.getCookie(userCode_cookie+'_'+basicConstant.BHT_COOKIE_STATEBAR);
+			
+			var headerMainFrame = bht_cookie_header==null?basicConstant.GENERAL:bht_cookie_header;
+			var navigateMainFrame = bht_cookie_navigate==null?basicConstant.GENERAL:bht_cookie_navigate;
+			var outlookBarMainFrame = bht_cookie_outlook==null?basicConstant.WINXP:bht_cookie_outlook;
+			var mainPageMainFrame = bht_cookie_mainpage==null?basicConstant.GENERAL:bht_cookie_mainpage;
+			var stateBarMainFrame = bht_cookie_statebar==null?basicConstant.WINXP:bht_cookie_statebar;
+			//动态加载页面框架js和构造实例
+			if(basicConstant.WINXP == headerMainFrame){
+				$import('./js/com/bhtec/view/viewport/winxp/Header', 'js');
+			}else if(basicConstant.GENERAL == headerMainFrame){
+				$import('./js/com/bhtec/view/viewport/general/Header', 'js');
+			}
+			
+			if(basicConstant.WINXP == navigateMainFrame){
+				$import('./js/com/bhtec/view/viewport/winxp/NavBar', 'js');
+			}else if(basicConstant.GENERAL == navigateMainFrame){
+				$import('./js/com/bhtec/view/viewport/general/NavBar', 'js');
+			}
+			
+			if(basicConstant.WINXP == mainPageMainFrame){
+				$import('./js/com/bhtec/view/viewport/winxp/MainPage', 'js');
+			}else if(basicConstant.GENERAL == mainPageMainFrame){
+				$import('./js/com/bhtec/view/viewport/general/MainPage', 'js');
+			}
+			//如果headerMainFrame = winxp,则不显示outlook
+			if(basicConstant.WINXP != navigateMainFrame){
+				$import('./js/com/bhtec/view/viewport/general/DynamicChangeTree', 'js');
+				if(basicConstant.WINXP == outlookBarMainFrame){
+					$import('./js/com/bhtec/view/viewport/winxp/OutlookBar', 'js');
+				}else if(basicConstant.GENERAL == outlookBarMainFrame){
+					$import('./js/com/bhtec/view/viewport/general/OutlookBar', 'js');
+				}
+			}
+			if(basicConstant.WINXP == stateBarMainFrame){
+				$import('./js/com/bhtec/view/viewport/winxp/StateBar', 'js');
+				
+			}else if(basicConstant.GENERAL == stateBarMainFrame){
+				$import('./js/com/bhtec/view/viewport/general/StateBar', 'js');
+			}	    	
+			
+			Ext.onReady(function(){
+				Ext.QuickTips.init();
+				Ext.form.Field.prototype.msgTarget = 'side';
+				Ext.BLANK_IMAGE_URL = './ext/resources/images/default/s.gif';
+				ajaxRequest({
+					url : 'loginAction!loginSysSecondDo.action',
+					msg : '系统登录中,请稍候...',
+					params : {
+						
+					},
+					callBack : function(returnData) {
+						new com.bhtec.view.util.sound.Sound();//初始化音乐
+						var viewport = new com.bhtec.view.ViewportFactory(returnData);//模版工厂,会用到以上全局变量
+					}
+				});
+			});
+			
+	</script>
+  </head>
+  
+  <body style="background-image:url(./img/bht.png)" onunload="sessionInvalidate()" onkeydown= "eventFun(event)" >
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- 统一用户基础action -->
+	<bean id="uumBaseAction" class="com.bhtec.action.uum.UumBaseAction" 
+		scope="prototype" parent="platformBaseAction">
+	</bean>
+	<!-- 机构action -->
+	<bean id="organAction" class="com.bhtec.action.uum.organ.OrganAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="organService" ref="organService"></property>
+	</bean>
+	<!-- 角色action -->
+	<bean id="roleAction" class="com.bhtec.action.uum.role.RoleAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="roleService" ref="roleService"></property>
+		<property name="privilegeService" ref="privilegeService"></property>
+		<property name="roleUserService" ref="roleUserService"></property>
+	</bean>
+	<!-- 角色分配action -->
+	<bean id="roleOrganAction" class="com.bhtec.action.uum.role.RoleOrganAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="roleOrganService" ref="roleOrganService"></property>
+	</bean>
+	<!-- 用户action -->
+	<bean id="userAction" class="com.bhtec.action.uum.user.UserAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="userService" ref="userService"></property>
+		<property name="roleUserService" ref="roleUserService"></property>
+		<property name="privilegeService" ref="privilegeService"></property>
+		<property name="platformCommonService" ref="platformCommonService"></property>
+	</bean>
+	<!-- 用户代理action -->
+	<bean id="userAgentAction" class="com.bhtec.action.uum.user.UserAgentAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="userAgentService" ref="userAgentService"></property>
+	</bean>
+	<!-- 用户组action -->
+	<bean id="userGroupAction" class="com.bhtec.action.uum.group.usergroup.UserGroupAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="userGroupService" ref="userGroupService"></property>
+		<property name="roleOrganService" ref="roleOrganService"></property>
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<!-- 角色组action -->
+	<bean id="roleGroupAction" class="com.bhtec.action.uum.group.rolegroup.RoleGroupAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="roleGroupService" ref="roleGroupService"></property>
+		<property name="roleService" ref="roleService"></property>
+	</bean>
+	<!-- 普通组action -->
+	<bean id="generalGroupAction" class="com.bhtec.action.uum.group.generalgroup.GeneralGroupAction" 
+		scope="prototype" parent="uumBaseAction">
+		<property name="generalGroupService" ref="generalGroupService"></property>
+		<property name="roleOrganService" ref="roleOrganService"></property>
+		<property name="userService" ref="userService"></property>
+		<property name="roleService" ref="roleService"></property>
+	</bean>
+</beans>	

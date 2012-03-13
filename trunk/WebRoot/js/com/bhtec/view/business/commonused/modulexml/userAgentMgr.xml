@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrlShare>./ext/ux/multiselect/DDView.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/multiselect/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrlShare>./ext/ux/datetime/Spinner.js</jsUrlShare>
+		    <jsUrlShare>./ext/ux/datetime/SpinnerField.js</jsUrlShare>
+		    <jsUrlShare>./ext/ux/datetime/yearmonthdatetime.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/commonused/useragent/UserAgent.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.commonused.useragent.UserAgent</jsMainClassName>
+		</listView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="userCode">用户号</field>
+		<field name="userName">用户名</field>
+		<field name="userOldPassword">原密码</field>
+		<field name="userNewPassword">新密码</field>
+		<field name="userConfirmPassword">确认密码</field>
+	</fieldNames>
+</module>

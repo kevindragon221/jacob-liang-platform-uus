@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/platform/moduleopt/ModuleOptList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.moduleopt.ModuleOptList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/platform/moduleopt/ModuleOptVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.moduleopt.ModuleOptVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="operateName">操作名称</field>
+		<field name="optImgLink">图片链接</field>
+		<field name="optFunLink">功能链接</field>
+		<field name="optOrder">操作顺序</field>
+		<field name="optGroup">操作组</field>
+		<field name="status">模块状态</field>
+		<field name="memo">模块备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

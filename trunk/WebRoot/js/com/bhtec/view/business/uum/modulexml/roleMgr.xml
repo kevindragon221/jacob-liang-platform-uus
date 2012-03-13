@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/uum/role/RoleList.js</jsUrl>
+			<jsUrlShare>./js/com/bhtec/view/util/ux/MultiSelect.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/uum/role/RoleAssignModOpt.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.role.RoleList</jsMainClassName>
+		</listView>
+		<opView>			
+			<jsUrl>./js/com/bhtec/view/business/uum/role/RoleVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.role.RoleVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="roleName">角色名称</field>
+		<field name="roleLevel">角色级别</field>
+		<field name="status">角色状态</field>
+		<field name="memo">备注</field>
+		<field name="creator">创建人</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

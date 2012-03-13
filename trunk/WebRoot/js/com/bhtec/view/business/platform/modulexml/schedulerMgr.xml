@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module> 
+  <dynamicLoadJs>
+	<listView>
+		<jsUrl>./js/com/bhtec/view/business/platform/scheduler/SchedulerList.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.platform.scheduler.SchedulerList</jsMainClassName>
+	</listView>
+	<opView>
+		<jsUrlShare>./ext/ux/datetime/Spinner.js</jsUrlShare>
+	    <jsUrlShare>./ext/ux/datetime/SpinnerField.js</jsUrlShare>
+	    <jsUrlShare>./ext/ux/datetime/yearmonthdatetime.js</jsUrlShare>
+		<jsUrl>./js/com/bhtec/view/business/platform/scheduler/SchedulerVOp.js</jsUrl>
+		<jsMainClassName>com.bhtec.view.business.platform.scheduler.SchedulerVOp</jsMainClassName>
+	</opView>
+  </dynamicLoadJs> 
+  <fieldNames> 
+    <field name="jobName">任务名称</field>  
+    <field name="jobClassDescript">任务类描述</field>  
+    <field name="triggerType">触发器类型</field> 
+    <field name="timeExpress">时间表达式</field>
+    <field name="startTime">开始时间</field>
+    <field name="endTime">结束时间</field>
+    <field name="repeatTime">重复次数</field>
+    <field name="splitTime">时间间隔(秒)</field>
+    <field name="status">任务状态</field>
+	<field name="memo">任务备注</field>
+	<field name="creator">创建者</field>
+	<field name="createDate">创建日期</field>
+  </fieldNames>  
+</module>

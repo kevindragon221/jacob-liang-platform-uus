@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/platform/district/DistrictList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.district.DistrictList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/platform/district/DistrictVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.district.DistrictVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="districtName">地区名称</field>
+		<field name="districtCode">地区代码</field>
+		<field name="districtPostal">地区邮编</field>
+		<field name="districtTelcode">电话区号</field>
+		<field name="districtLevel">地区级别</field>
+		<field name="status">地区状态</field>
+		<field name="memo">地区备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+		<field name="upDistrict">上级地区</field>
+	</fieldNames>
+</module>

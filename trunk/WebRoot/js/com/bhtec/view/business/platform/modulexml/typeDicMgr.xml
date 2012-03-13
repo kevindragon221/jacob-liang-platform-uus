@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrlShare>./ext/ux/grid/RowExpander.js</jsUrlShare>
+			<jsUrl>./js/com/bhtec/view/business/platform/typedictionary/TypeDictionaryList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.typedictionary.TypeDictionaryList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/platform/typedictionary/TypeDictionaryVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.typedictionary.TypeDictionaryVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="bigTypeName">字典大类名称</field>
+		<field name="bigTypeCode">字典大类代码</field>
+		<field name="smallTypeName">字典小类名称</field>
+		<field name="smallTypeCode">字典小类代码</field>
+		<field name="status">字典状态</field>
+		<field name="memo">字典备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

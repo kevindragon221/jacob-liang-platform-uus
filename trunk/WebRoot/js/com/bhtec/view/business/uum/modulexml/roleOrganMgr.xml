@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/uum/role/RoleOrganList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.role.RoleOrganList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/uum/role/RoleOrganVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.uum.role.RoleOrganVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="roleName">角色名称</field>
+		<field name="status">角色状态</field>
+		<field name="memo">备注</field>
+		<field name="creator">创建人</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

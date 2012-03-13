@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+	<!-- 机构DAO -->
+	<bean id="organDao" class="com.bhtec.dao.impl.uum.organ.OrganDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 角色DAO -->
+	<bean id="roleDao" class="com.bhtec.dao.impl.uum.role.RoleDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 角色分配DAO -->
+	<bean id="roleOrganDao" class="com.bhtec.dao.impl.uum.role.RoleOrganDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 用户DAO -->
+	<bean id="userDao" class="com.bhtec.dao.impl.uum.user.UserDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 用户代理DAO -->
+	<bean id="userAgentDao" class="com.bhtec.dao.impl.uum.user.UserAgentDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 角色用户DAO -->
+	<bean id="roleUserDao" class="com.bhtec.dao.impl.uum.role.RoleUserDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 权限DAO -->
+	<bean id="privilegeDao" class="com.bhtec.dao.impl.uum.privilege.PrivilegeDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 用户组DAO -->
+	<bean id="userGroupDao" class="com.bhtec.dao.impl.uum.group.usergroup.UserGroupDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+	
+	<!-- 角色组DAO -->
+	<bean id="roleGroupDao" class="com.bhtec.dao.impl.uum.group.rolegroup.RoleGroupDaoHibImpl" 
+		  parent="baseDao">
+	</bean>
+</beans>

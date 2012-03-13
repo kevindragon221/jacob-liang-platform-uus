@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<dynamicLoadJs>
+		<listView>
+			<jsUrl>./js/com/bhtec/view/business/platform/systemparameter/SystemParameterList.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.systemparameter.SystemParameterList</jsMainClassName>
+		</listView>
+		<opView>
+			<jsUrl>./js/com/bhtec/view/business/platform/systemparameter/SystemParameterVOp.js</jsUrl>
+			<jsMainClassName>com.bhtec.view.business.platform.systemparameter.SystemParameterVOp</jsMainClassName>
+		</opView>
+	</dynamicLoadJs>
+	<fieldNames>
+		<field name="paraName">参数名称</field>
+		<field name="paraKeyName">参数键名称</field>
+		<field name="paraValue">参数键值</field>
+		<field name="paraType">系统类别</field>
+		<field name="status">参数状态</field>
+		<field name="memo">参数备注</field>
+		<field name="creator">创建者</field>
+		<field name="createDate">创建日期</field>
+	</fieldNames>
+</module>

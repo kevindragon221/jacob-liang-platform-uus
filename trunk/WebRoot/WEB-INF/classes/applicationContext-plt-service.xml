@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- 平台公共service -->
+	<bean id="platformCommonService" class="com.bhtec.service.impl.platform.PlatformCommonServiceImpl"
+	      parent="baseService">
+		<property name="moduleService"><ref bean="moduleService"/></property>		
+		<property name="systemParameterService"><ref bean="systemParameterService"/></property>
+		<property name="typeDictionaryService"><ref bean="typeDictionaryService"/></property>
+		<property name="districtService"><ref bean="districtService"/></property>
+		<property name="codeService"><ref bean="codeService"/></property>
+	</bean>
+	
+	<bean id="mainFrameFunService" class="com.bhtec.service.impl.platform.mainframefun.MainFrameFunServiceImpl"
+		parent="baseService">
+	</bean>
+	
+	<bean id="userPageLayoutService" class="com.bhtec.service.impl.commonused.UserPageLayoutServiceImpl"
+		parent="baseService">
+		<property name="mainFrameFunService"><ref bean="mainFrameFunService"/></property>
+	</bean>
+	
+	<!--用户常用功能sevice -->
+	<bean id="userCommFunService" class="com.bhtec.service.impl.commonused.UserCommFunServiceImpl"
+		parent="baseService">
+		<property name="userCommFunDao"><ref bean="userCommFunDao"/></property>
+	</bean>
+	
+	<bean id="moduleService" class="com.bhtec.service.impl.platform.module.ModuleServiceImpl"
+		parent="baseService">
+		<property name="moduleDao"><ref bean="moduleDao"/></property>
+		<property name="moduleOptService"><ref bean="moduleOptService"/></property>
+		<property name="uumCommonService"><ref bean="uumCommonService"/></property>
+	</bean>
+	<!-- 模块操作service -->
+	<bean id="moduleOptService" class="com.bhtec.service.impl.platform.moduleopt.ModuleOptServiceImpl"
+		parent="baseService">
+		<property name="moduleOptDao"><ref bean="moduleOptDao"/></property>
+		<property name="moduleService"><ref bean="moduleService"/></property>
+	</bean>
+	
+	<bean id="sysPlLoggerService" class="com.bhtec.service.impl.platform.logger.SysPlLoggerServiceImpl"
+		parent="baseService">
+		<property name="sysPlLoggerDao"><ref bean="sysPlLoggerDao"/></property>
+	</bean>
+	<!-- 系统配置service -->
+	<bean id="systemConfigService" class="com.bhtec.service.impl.platform.systemconfig.SystemConfigServiceImpl"
+		parent="baseService">
+	</bean>
+	<!-- 公告service -->
+	<bean id="afficheService" class="com.bhtec.service.impl.platform.affiche.AfficheServiceImpl"
+		parent="baseService">
+		<property name="afficheDao"><ref bean="afficheDao"/></property>
+		<property name="accessoryService"><ref bean="accessoryService"/></property>
+	</bean>
+	<!-- 附件service -->
+	<bean id="accessoryService" class="com.bhtec.service.impl.platform.accessory.AccessoryServiceImpl"
+		parent="baseService">
+		<property name="accessoryDao"><ref bean="accessoryDao"/></property>
+	</bean>	
+	<!-- 系统参数service -->
+	<bean id="systemParameterService" class="com.bhtec.service.impl.platform.systemparameter.SystemParameterServiceImpl"
+		parent="baseService">
+		<property name="systemParameterDao"><ref bean="systemParameterDao"/></property>
+		<property name="typeDictionaryService"><ref bean="typeDictionaryService"/></property>
+	</bean>
+	<!-- 类别字典service -->
+	<bean id="typeDictionaryService" class="com.bhtec.service.impl.platform.typedictionary.TypeDictionaryServiceImpl"
+		parent="baseService">
+		<property name="typeDictionaryDao"><ref bean="typeDictionaryDao"/></property>
+	</bean>
+	<!-- 地区service -->
+	<bean id="districtService" class="com.bhtec.service.impl.platform.district.DistrictServiceImpl"
+		parent="baseService">
+		<property name="districtDao"><ref bean="districtDao"/></property>
+		<property name="typeDictionaryService"><ref bean="typeDictionaryService"/></property>
+	</bean>
+	<!-- 编码service -->
+	<bean id="codeService" class="com.bhtec.service.impl.platform.code.CodeServiceImpl"
+		parent="baseService">
+		<property name="codeDao"><ref bean="codeDao"/></property>
+	</bean>
+	<!-- 调度service -->
+	<bean id="schedulerService" class="com.bhtec.service.impl.platform.scheduler.SchedulerServiceImpl"
+		parent="baseService">
+		<property name="schedulerDao"><ref bean="schedulerDao"/></property>
+	</bean>
+</beans>

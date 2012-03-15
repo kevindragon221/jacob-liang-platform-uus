@@ -5,7 +5,6 @@
  */
 package com.bhtec.action.commonused;
 
-import static com.bhtec.common.constant.Common.ROLE_ID;
 import static com.bhtec.common.constant.Common.USER_ID;
 
 import java.util.List;

@@ -21,7 +21,6 @@ import com.bhtec.common.tools.SpringContextUtil;
 import com.bhtec.common.util.SystemConifgXmlParse;
 import com.bhtec.domain.pojo.platform.SysplAffiche;
 import com.bhtec.domain.pojo.uum.UumUser;
-import com.bhtec.exception.ApplicationException;
 import com.bhtec.service.iface.platform.affiche.AfficheService;
 import com.googlecode.jsonplugin.annotations.JSON;
 
@@ -59,7 +58,7 @@ public class BaseInfoAction extends BaseAction {
 		uumUser.setUserId(userId);
 		uumUser.setUserCode(userCode);
 		uumUser.setUserName(userName);
-		return this.SUCCESS;
+		return SUCCESS;
 	}
 	/**
 	 * 功能说明：获得系统名称
@@ -69,8 +68,7 @@ public class BaseInfoAction extends BaseAction {
 	 */
 	@JSON(serialize = false)
 	public String getSystemName(){
-		SystemConifgXmlParse systemConifg = SystemConifgXmlParse.getInstance();
-		String systemName = systemConifg.getSystemConfigBean().getSystemName();
+		String systemName = SystemConifgXmlParse.getInstance().getSystemConfigBean().getSystemName();
 		return systemName;
 	}
 	

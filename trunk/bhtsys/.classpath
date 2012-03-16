@@ -50,5 +50,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/oscache-2.4.1.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/yuicompressor-2.4.4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/db2jcc.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/db2jcc_license_cu.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

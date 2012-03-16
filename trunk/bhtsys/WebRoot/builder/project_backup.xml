@@ -36,7 +36,7 @@
 	
 	<!--拷贝所有平台和统一用户源文件-->
 	<target name="copyAllSrc">
-		<copy todir="${backupproject.dir}/bhtsys">
+		<copy todir="D:/myworkspace/bhtsys_google">
 			<fileset dir="${bhtsys.project.dir}">
 				<include name="**" />
 			</fileset>

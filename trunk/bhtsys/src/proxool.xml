@@ -10,7 +10,29 @@ Anything outside the "proxool" tag is ignored. -->
       <property name="user" value="postgres"/>
       <property name="password" value="123456"/>
     </driver-properties>
-    <!--driver-url>jdbc:mysql://localhost:3306/bhtec</driver-url>
+    
+    <!--driver-url>jdbc:db2://localhost:50000/bhtsys</driver-url>
+    <driver-class>com.ibm.db2.jcc.DB2Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="db2admin"/>
+      <property name="password" value="123456"/>
+    </driver-properties>
+    
+    <driver-url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</driver-url>
+    <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+    <driver-properties>
+      <property name="user" value="bhtec"/>
+      <property name="password" value="123456"/>
+ 	</driver-properties> 
+ 	
+ 	<driver-url>jdbc:sqlserver://localhost:1433;DatabaseName=bhtec</driver-url>
+    <driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+    <driver-properties>
+      <property name="user" value="sa"/>
+      <property name="password" value="123456"/>
+    </driver-properties>   
+    
+    <driver-url>jdbc:mysql://localhost:3306/bhtec</driver-url>
     <driver-class>com.mysql.jdbc.Driver</driver-class>
     <driver-properties>
       <property name="user" value="root"/>
@@ -22,6 +44,6 @@ Anything outside the "proxool" tag is ignored. -->
     <maximum-new-connections>20</maximum-new-connections>
     <prototype-count>5</prototype-count>
     <test-before-use>true</test-before-use>
-    <house-keeping-test-sql>select current_date</house-keeping-test-sql>
+    <house-keeping-test-sql>select * from bhtec.uum_user where USER_ID=1</house-keeping-test-sql>
   </proxool>
 </something-else-entirely>

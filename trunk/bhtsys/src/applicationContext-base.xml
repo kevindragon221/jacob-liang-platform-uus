@@ -38,6 +38,9 @@
 			    	org.hibernate.connection.ProxoolConnectionProvider
 			    </prop>
 			    <!-- 数据库方言 -->
+				<!--prop key="hibernate.dialect">org.hibernate.dialect.DB2Dialect</prop-->
+				<!--prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop-->
+				<!--prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop-->				
 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<!--prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop-->
 				<prop key="hibernate.show_sql">true</prop>

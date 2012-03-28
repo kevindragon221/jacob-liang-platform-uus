@@ -32,7 +32,7 @@ Anything outside the "proxool" tag is ignored. -->
       <property name="password" value="123456"/>
     </driver-properties>   
     
-    <driver-url>jdbc:mysql://localhost:3306/bhtec</driver-url>
+    <driver-url>jdbc:mysql://localhost:3306/bhtec?useUnicode=true&characterEncoding=utf8</driver-url>
     <driver-class>com.mysql.jdbc.Driver</driver-class>
     <driver-properties>
       <property name="user" value="root"/>
